@@ -1,3 +1,12 @@
-[gd_scene format=3 uid="uid://lrlvibnrtoy5"]
+[gd_scene load_steps=2 format=3 uid="uid://lrlvibnrtoy5"]
+
+[ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="1_kp36w"]
 
 [node name="MockLevel" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1921.0
+offset_bottom = 1077.0
+
+[node name="Ship" parent="." instance=ExtResource("1_kp36w")]
+position = Vector2(412, 314)

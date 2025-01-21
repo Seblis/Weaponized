@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://c00a8luwst5da"]
+
+[ext_resource type="Script" path="res://entities/spaceship/ship.gd" id="1_pvfd2"]
+[ext_resource type="PackedScene" uid="uid://duiklrnry7vpi" path="res://util/components/HealthComponent.tscn" id="1_safbe"]
+[ext_resource type="PackedScene" uid="uid://bgward60w0t5c" path="res://util/components/HurtboxComponent.tscn" id="2_gxgmd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jaop"]
+size = Vector2(40, 40)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8r75n"]
+radius = 18.0
+height = 38.0
+
+[node name="Ship" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_pvfd2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0.697475, 0, 0.0757668, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2jaop")
+
+[node name="HealthComponent" parent="." instance=ExtResource("1_safbe")]
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health") instance=ExtResource("2_gxgmd")]
+health = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtboxComponent"]
+shape = SubResource("CapsuleShape2D_8r75n")
