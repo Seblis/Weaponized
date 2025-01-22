@@ -14,4 +14,5 @@ func _on_timeout() -> void:
 	
 func spawn_enemy() -> void:
 	var enemy_instance = enemy_scene.instantiate()
+	add_child(enemy_instance)
 	enemy_instance.global_position = spawn_point.global_position

@@ -14,10 +14,10 @@ color = Color(0.258824, 0.360784, 0.866667, 1)
 position = Vector2(412, 314)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("2_6upni")]
-position = Vector2(761, 189)
+position = Vector2(1522, 193)
 
 [node name="EnemySpawner2" parent="." instance=ExtResource("2_6upni")]
-position = Vector2(736, 299)
+position = Vector2(1526, 279)
 
 [node name="EnemySpawner3" parent="." instance=ExtResource("2_6upni")]
-position = Vector2(736, 410)
+position = Vector2(1416, 378)
