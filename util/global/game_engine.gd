@@ -9,16 +9,16 @@ const GROUP_PROJECTILE = "GROUP_PROJECTILE"
 const GROUP_AGGRO_RANGE = "GROUP_AGGRO_RANGE"
 
 
-#var _player: PlayerCharacter
-#
-#func set_player(player: PlayerCharacter):
-	#_player = player
-#
-#func get_player():
-	#return _player
-#
-#func get_player_position():
-	#if _player is PlayerCharacter:
-		#return _player.global_position
-	#else:
-		#return null
+var _player: PlayerShip
+
+func set_player(player: PlayerShip):
+	_player = player
+
+func get_player():
+	return _player
+
+func get_player_position():
+	if _player is PlayerShip:
+		return _player.global_position
+	else:
+		return null

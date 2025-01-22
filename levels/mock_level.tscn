@@ -7,6 +7,7 @@
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1921.0
 offset_bottom = 1077.0
+color = Color(0.258824, 0.360784, 0.866667, 1)
 
 [node name="Ship" parent="." instance=ExtResource("1_kp36w")]
 position = Vector2(412, 314)
