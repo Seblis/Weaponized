@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://belvdvt81u044"]
+
+[ext_resource type="Script" path="res://entities/enemies/base_enemy.gd" id="1_45bqk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nxeey"]
+radius = 20.0
+height = 40.0
+
+[node name="BaseEnemy" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_45bqk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_nxeey")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(1, 0.129412, 0.129412, 1)
