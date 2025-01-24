@@ -2,15 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="1_kp36w"]
 [ext_resource type="PackedScene" uid="uid://cyl3q0blt7u4f" path="res://util/enemy_paths.tscn" id="2_4ry2s"]
-[ext_resource type="Script" path="res://levels/level_1/enemy_manager.gd" id="2_seq4y"]
+[ext_resource type="PackedScene" uid="uid://cngm1eyy7khog" path="res://util/enemy_manager.tscn" id="2_wup08"]
 
-[sub_resource type="Curve2D" id="Curve2D_ymesw"]
+[sub_resource type="Curve2D" id="Curve2D_duxah"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -74, 202, -401.637, -222.032, 401.637, 222.032, 1423, 154, 0, 0, 0, 0, 1687, 857)
 }
 point_count = 3
 
-[sub_resource type="Curve2D" id="Curve2D_ivt41"]
+[sub_resource type="Curve2D" id="Curve2D_qfema"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1755, -75, 155.564, -106.066, -155.564, 106.066, 1841, 872, 0, 0, 0, 0, 211, 957)
 }
@@ -26,14 +26,13 @@ color = Color(0.258824, 0.360784, 0.866667, 1)
 [node name="Ship" parent="." instance=ExtResource("1_kp36w")]
 position = Vector2(412, 314)
 
-[node name="EnemyManager" type="Node2D" parent="."]
-script = ExtResource("2_seq4y")
+[node name="EnemyManager" parent="." instance=ExtResource("2_wup08")]
 
 [node name="EnemyPaths" parent="EnemyManager" instance=ExtResource("2_4ry2s")]
 unique_name_in_owner = true
 
 [node name="Path2D" type="Path2D" parent="EnemyManager/EnemyPaths"]
-curve = SubResource("Curve2D_ymesw")
+curve = SubResource("Curve2D_duxah")
 
 [node name="Path2D2" type="Path2D" parent="EnemyManager/EnemyPaths"]
-curve = SubResource("Curve2D_ivt41")
+curve = SubResource("Curve2D_qfema")

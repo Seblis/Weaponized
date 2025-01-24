@@ -23,7 +23,7 @@ func _physics_process(delta):
 		pass
 
 
-func set_path_follow(path: PathFollow2D, final_progress):
+func set_path_follow(path: PathFollow2D, final_progress = 0.99):
 	path_follow = path
 	final_progress_rate = final_progress
 	
