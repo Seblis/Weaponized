@@ -5,12 +5,20 @@ extends CharacterBody2D
 @export var speed = 7
 @export var final_progress_rate = 0.99
 
+var _initial_movement_finished = false
+
 func _ready():
 	pass
 	
 func _physics_process(delta):
-	if path_follow.progress_ratio < final_progress_rate:
+	if not _initial_movement_finished and path_follow.progress_ratio < final_progress_rate:
 		path_follow.progress += speed
+	else:
+		_initial_movement_finished = true
+		
+	# Here we can add additional movement after the wave moved to it's destination
+	if _initial_movement_finished:
+		pass
 
 
 func set_path_follow(path: PathFollow2D, final_progress):
