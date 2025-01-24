@@ -6,7 +6,7 @@
 radius = 20.0
 height = 40.0
 
-[node name="BaseEnemy" type="CharacterBody2D"]
+[node name="BaseEnemy" type="CharacterBody2D" groups=["ENEMY"]]
 motion_mode = 1
 script = ExtResource("1_45bqk")
 

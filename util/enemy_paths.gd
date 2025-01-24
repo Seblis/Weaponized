@@ -13,8 +13,9 @@ func spawn_enemy(enemy, path_id = 0, stop_point = 0, enemy_params = null):
 	
 	path.add_child(path_follow)
 	
-	path_follow.add_child(new_enemy)
-	
+	path_follow.call_deferred("add_child",new_enemy)
+
+
 func spawn_multiple_enemies(enemy, path_id, amount, delay, spacing: float, order = 0):
 	#print(float(order), " ", float(amount))
 	spawn_enemy(enemy, path_id, 1.0 - spacing*float(order))

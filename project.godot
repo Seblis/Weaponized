@@ -25,6 +25,11 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 
+[global_group]
+
+ENEMY="Entities damaged by the player"
+PLAYER="Entities controller by the player"
+
 [input]
 
 move_up={

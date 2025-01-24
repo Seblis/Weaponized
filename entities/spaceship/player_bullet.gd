@@ -2,6 +2,7 @@ extends Area2D
 
 @export_range(0, 1000.0, 10.0) var _speed = 700.0
 @export_range(0, 5000.0, 100.0) var _max_range = 2000.0
+@export var _damage = 7
 
 var _traveled_distance = 0.0
 
@@ -23,3 +24,8 @@ func destroy():
 	set_deferred("monitoring", false)
 	# TODO: later on we can destroy bullet after it's hit animation is finished
 	queue_free()
+
+
+func _on_body_entered(body: Node2D):
+	if body.is_in_group("ENEMY"):
+		body.take_damage(_damage)
