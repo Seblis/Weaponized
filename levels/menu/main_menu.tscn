@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=3 uid="uid://cxo1k7f1udtps"]
+
+[ext_resource type="Texture2D" uid="uid://00bm731v25ny" path="res://assets/Home_screen.png" id="1_lacbk"]
+[ext_resource type="Texture2D" uid="uid://bv4pe6okt73id" path="res://assets/buttons/Button_menu.png" id="2_r8idx"]
+[ext_resource type="FontFile" uid="uid://n7quuucrm58i" path="res://assets/fonts/manaspace/manaspc.ttf" id="3_2k2nj"]
+[ext_resource type="Script" path="res://assets/buttons/valign.gd" id="4_uiw43"]
+
+[sub_resource type="Theme" id="Theme_pgn8n"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_r1u1s"]
+script = ExtResource("4_uiw43")
+
+[sub_resource type="GDScript" id="GDScript_781ut"]
+script/source = "extends Button
+
+func _on_play_btn_pressed():
+	get_tree().change_scene_to_file(\"res://levels/mock_level.tscn\")
+
+func _on_lore_btn_pressed():
+	get_tree().change_scene_to_file(\"res://levels/menu/lore_menu.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_fnapu"]
+script/source = "extends Button
+
+func _on_level_select_btn_pressed():
+	get_tree().change_scene_to_file(\"res://levels/menu/level_select.tscn\")
+
+func _on_quit_btn_pressed():
+	get_tree().quit()
+"
+
+[node name="Main" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_lacbk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/TextureRect"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="btnContinue" type="NinePatchRect" parent="Control/TextureRect/VBoxContainer"]
+custom_minimum_size = Vector2(252, 96)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_pgn8n")
+texture = ExtResource("2_r8idx")
+region_rect = Rect2(96, 0, 192, 128)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/TextureRect/VBoxContainer/btnContinue"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 6.0
+offset_right = 231.0
+offset_bottom = 72.0
+theme_override_fonts/normal_font = ExtResource("3_2k2nj")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-8]CONTINUE ASSIGNMENT[/valign][/center]"
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/TextureRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="btnPlay" type="Button" parent="Control/TextureRect/VBoxContainer"]
+custom_minimum_size = Vector2(252, 96)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Play
+"
+script = SubResource("GDScript_781ut")
+
+[node name="btnLore" type="Button" parent="Control/TextureRect/VBoxContainer"]
+custom_minimum_size = Vector2(252, 96)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Intel Database"
+script = SubResource("GDScript_781ut")
+
+[node name="btnLevelSelect" type="Button" parent="Control/TextureRect/VBoxContainer"]
+custom_minimum_size = Vector2(252, 96)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Level Select"
+script = SubResource("GDScript_fnapu")
+
+[node name="btnQuit" type="Button" parent="Control/TextureRect/VBoxContainer"]
+custom_minimum_size = Vector2(252, 96)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Quit"
+script = SubResource("GDScript_fnapu")
+
+[connection signal="pressed" from="Control/TextureRect/VBoxContainer/btnPlay" to="Control/TextureRect/VBoxContainer/btnPlay" method="_on_play_btn_pressed"]
+[connection signal="pressed" from="Control/TextureRect/VBoxContainer/btnLore" to="Control/TextureRect/VBoxContainer/btnLore" method="_on_lore_btn_pressed"]
+[connection signal="pressed" from="Control/TextureRect/VBoxContainer/btnLevelSelect" to="Control/TextureRect/VBoxContainer/btnLevelSelect" method="_on_level_select_btn_pressed"]
+[connection signal="pressed" from="Control/TextureRect/VBoxContainer/btnQuit" to="Control/TextureRect/VBoxContainer/btnQuit" method="_on_quit_btn_pressed"]
