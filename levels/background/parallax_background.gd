@@ -10,5 +10,5 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	sprite.region_rect.position += delta * Vector2(slide_speed,slide_speed)
-	if sprite.region_rect.position >= Vector2(1200,1200):
+	if sprite.region_rect.position >= Vector2(330,336):
 		sprite.region_rect.position = Vector2.ZERO
