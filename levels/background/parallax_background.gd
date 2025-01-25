@@ -1,5 +1,6 @@
 extends ParallaxBackground
 
+# if changed remember to update the preload file location path
 @export var background_texture = preload("res://levels/background/cat_space.png")
 @export var slide_speed = 20
 
@@ -10,5 +11,6 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	sprite.region_rect.position += delta * Vector2(slide_speed,slide_speed)
-	if sprite.region_rect.position >= Vector2(330,336):
+	# pick correct numbers for Vector2 below
+	if sprite.region_rect.position >= Vector2(1920,1080):
 		sprite.region_rect.position = Vector2.ZERO
