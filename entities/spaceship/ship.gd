@@ -6,7 +6,7 @@ var max_speed = 600.0
 var steering_factor = 3.0
 
 func _on_ready():
-	pass
+	GameEngine.set_player(self)
 
 func _process(delta: float):
 	var direction = Vector2(0, 0)
@@ -17,11 +17,13 @@ func _process(delta: float):
 
 	var desired_velocity = max_speed * direction
 	var steering = desired_velocity - velocity
+	
 	velocity += steering * steering_factor * delta
 	position += velocity * delta
 
-	if velocity.length() > 0.0:
-		rotation = velocity.angle()
+	var aim_direction = global_position.direction_to(get_global_mouse_position())
+	if aim_direction.length() > 0.15:
+		rotation = aim_direction.angle()
 	
 	move_and_slide()
 	
