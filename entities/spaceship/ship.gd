@@ -6,7 +6,7 @@ var max_speed = 600.0
 var steering_factor = 3.0
 
 func _on_ready():
-	pass
+	GameEngine.set_player(self)
 
 func _process(delta: float):
 	var direction = Vector2(0, 0)

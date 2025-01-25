@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://lrlvibnrtoy5"]
+
+[ext_resource type="Script" path="res://levels/level_1/level_1.gd" id="1_d4hc3"]
+[ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="1_kp36w"]
+[ext_resource type="PackedScene" uid="uid://cyl3q0blt7u4f" path="res://util/enemy_paths.tscn" id="2_4ry2s"]
+[ext_resource type="PackedScene" uid="uid://cngm1eyy7khog" path="res://util/enemy_manager.tscn" id="2_wup08"]
+
+[sub_resource type="Curve2D" id="Curve2D_duxah"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -74, 202, -401.637, -222.032, 401.637, 222.032, 1423, 154, 0, 0, 0, 0, 1687, 857)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_qfema"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1755, -75, 155.564, -106.066, -155.564, 106.066, 1841, 872, 0, 0, 0, 0, 211, 957)
+}
+point_count = 3
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_d4hc3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1921.0
+offset_bottom = 1077.0
+color = Color(0.258824, 0.360784, 0.866667, 1)
+
+[node name="Ship" parent="." instance=ExtResource("1_kp36w")]
+position = Vector2(412, 314)
+
+[node name="EnemyManager" parent="." instance=ExtResource("2_wup08")]
+unique_name_in_owner = true
+
+[node name="EnemyPaths" parent="EnemyManager" instance=ExtResource("2_4ry2s")]
+unique_name_in_owner = true
+
+[node name="Path2D" type="Path2D" parent="EnemyManager/EnemyPaths"]
+curve = SubResource("Curve2D_duxah")
+
+[node name="Path2D2" type="Path2D" parent="EnemyManager/EnemyPaths"]
+curve = SubResource("Curve2D_qfema")

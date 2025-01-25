@@ -10,6 +10,7 @@ const GROUP_AGGRO_RANGE = "GROUP_AGGRO_RANGE"
 
 
 var _player: PlayerShip
+var _enemies_count = 0
 
 func set_player(player: PlayerShip):
 	_player = player
@@ -22,3 +23,12 @@ func get_player_position():
 		return _player.global_position
 	else:
 		return null
+
+func enemies_counter(diff):
+	print("Enemies amount changed by")
+	_enemies_count += diff
+	
+	if diff and not _enemies_count:
+		SignalManager.on_wave_defeated.emit()
+	
+	
