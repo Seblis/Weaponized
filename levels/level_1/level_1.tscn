@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://levels/level_1/level_1.gd" id="1_d4hc3"]
 [ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="1_kp36w"]
-[ext_resource type="PackedScene" path="res://util/enemy_paths.tscn" id="2_4ry2s"]
-[ext_resource type="PackedScene" path="res://util/enemy_manager.tscn" id="2_wup08"]
+[ext_resource type="PackedScene" uid="uid://cyl3q0blt7u4f" path="res://util/enemy_paths.tscn" id="2_4ry2s"]
+[ext_resource type="PackedScene" uid="uid://cngm1eyy7khog" path="res://util/enemy_manager.tscn" id="2_wup08"]
 
 [sub_resource type="Curve2D" id="Curve2D_duxah"]
 _data = {
