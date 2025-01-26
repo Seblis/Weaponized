@@ -21,12 +21,10 @@ func _on_button_pressed():
 	nine_patch_rect.texture = texture_pressed
 	_on_nine_patch_button_pressed.emit()
 
-
 func _on_button_mouse_entered():
 	nine_patch_rect.texture = texture_hovered
 	if(set_valign):
 		button_rich_label.text = button_rich_label.text.replace("valign px=%d" % valign_base,"valign px=%d" % valign_pressed)
-
 
 func _on_button_mouse_exited():
 	nine_patch_rect.texture = texture_released
