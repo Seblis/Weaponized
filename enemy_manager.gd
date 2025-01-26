@@ -5,7 +5,7 @@ extends Node2D
 
 var _waves_amount = -1
 var _current_wave = 0
-var base_enemy = preload("res://entities/enemies/BaseEnemy.tscn")
+#var base_enemy = preload("res://entities/enemies/base_enemy/BaseEnemy.tscn")
 ##
 #  [enemy_scene, path_id, enemies_amount, delay(s), spacing]
 #  we can provide optional array with enemy parameters at the end
