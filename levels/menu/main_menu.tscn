@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cxo1k7f1udtps"]
+[gd_scene load_steps=9 format=3 uid="uid://cxo1k7f1udtps"]
 
 [ext_resource type="Texture2D" uid="uid://00bm731v25ny" path="res://assets/Home_screen.png" id="1_lacbk"]
 [ext_resource type="Script" path="res://levels/menu/main_menu.gd" id="1_yie7d"]
@@ -10,28 +10,6 @@
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_r1u1s"]
 script = ExtResource("4_uiw43")
-
-[sub_resource type="GDScript" id="GDScript_781ut"]
-script/source = "extends Button
-
-func _on_play_btn_pressed():
-	get_tree().change_scene_to_file(\"res://levels/mock_level.tscn\")
-
-func _on_lore_btn_pressed():
-	get_tree().change_scene_to_file(\"res://levels/menu/lore_menu.tscn\")
-"
-
-[sub_resource type="GDScript" id="GDScript_fnapu"]
-script/source = "extends Button
-
-func _on_level_select_btn_pressed():
-	get_tree().change_scene_to_file(\"res://levels/menu/level_select.tscn\")
-
-func _on_quit_btn_pressed():
-	get_tree().quit()
-"
-
-[sub_resource type="Theme" id="Theme_pgn8n"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_yie7d")
@@ -58,7 +36,7 @@ offset_bottom = 1080.0
 custom_minimum_size = Vector2(0, 400)
 layout_mode = 2
 
-[node name="continueAssignment" parent="Control/TextureRect/VBoxContainer" instance=ExtResource("5_kbwoc")]
+[node name="continueAssignment" parent="Control/TextureRect/VBoxContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("5_kbwoc")]
 custom_minimum_size = Vector2(252, 96)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -66,8 +44,12 @@ size_flags_vertical = 6
 texture_pressed = ExtResource("6_osjkh")
 texture_released = ExtResource("2_r8idx")
 texture_hovered = ExtResource("6_osjkh")
+button_rich_label = NodePath("continueLabel")
+set_valign = true
+valign_base = -12
+valign_pressed = -24
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/TextureRect/VBoxContainer/continueAssignment"]
+[node name="continueLabel" type="RichTextLabel" parent="Control/TextureRect/VBoxContainer/continueAssignment"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_right = 252.0
@@ -76,54 +58,86 @@ mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("3_2k2nj")
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "[center][valign px=-24]CONTINUE ASSIGNMENT[/valign][/center]"
+text = "[center][valign px=-12]CONTINUE ASSIGNMENT[/valign][/center]"
 scroll_active = false
 custom_effects = [SubResource("RichTextEffect_r1u1s")]
 
-[node name="btnPlay" type="Button" parent="Control/TextureRect/VBoxContainer"]
+[node name="intelDatabase" parent="Control/TextureRect/VBoxContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("5_kbwoc")]
 custom_minimum_size = Vector2(252, 96)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-text = "Play
-"
-script = SubResource("GDScript_781ut")
+texture_pressed = ExtResource("6_osjkh")
+texture_released = ExtResource("2_r8idx")
+texture_hovered = ExtResource("6_osjkh")
+button_rich_label = NodePath("intelLabel")
+set_valign = true
+valign_base = -12
+valign_pressed = -24
 
-[node name="btnLore" type="Button" parent="Control/TextureRect/VBoxContainer"]
+[node name="intelLabel" type="RichTextLabel" parent="Control/TextureRect/VBoxContainer/intelDatabase"]
+layout_mode = 0
+offset_right = 252.0
+offset_bottom = 96.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_2k2nj")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-12]INTEL DATABASE[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
+
+[node name="assignmentSelection" parent="Control/TextureRect/VBoxContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("5_kbwoc")]
 custom_minimum_size = Vector2(252, 96)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-text = "Intel Database"
-script = SubResource("GDScript_781ut")
+texture_pressed = ExtResource("6_osjkh")
+texture_released = ExtResource("2_r8idx")
+texture_hovered = ExtResource("6_osjkh")
+button_rich_label = NodePath("assignmentLabel")
+set_valign = true
+valign_base = -12
+valign_pressed = -24
 
-[node name="btnLevelSelect" type="Button" parent="Control/TextureRect/VBoxContainer"]
+[node name="assignmentLabel" type="RichTextLabel" parent="Control/TextureRect/VBoxContainer/assignmentSelection"]
+layout_mode = 0
+offset_right = 252.0
+offset_bottom = 96.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_2k2nj")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-12]ASSIGNMENT SELECTION[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
+
+[node name="exitInterface" parent="Control/TextureRect/VBoxContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("5_kbwoc")]
 custom_minimum_size = Vector2(252, 96)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-text = "Level Select"
-script = SubResource("GDScript_fnapu")
+texture_pressed = ExtResource("6_osjkh")
+texture_released = ExtResource("2_r8idx")
+texture_hovered = ExtResource("6_osjkh")
+button_rich_label = NodePath("exitLabel")
+set_valign = true
+valign_base = -12
+valign_pressed = -24
 
-[node name="btnQuit" type="Button" parent="Control/TextureRect/VBoxContainer"]
-custom_minimum_size = Vector2(252, 96)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-text = "Quit"
-script = SubResource("GDScript_fnapu")
+[node name="exitLabel" type="RichTextLabel" parent="Control/TextureRect/VBoxContainer/exitInterface"]
+layout_mode = 0
+offset_right = 252.0
+offset_bottom = 96.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_2k2nj")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-12]EXIT INTERFACE[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
 
-[node name="btnContinue" type="NinePatchRect" parent="Control/TextureRect/VBoxContainer"]
-custom_minimum_size = Vector2(252, 96)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = SubResource("Theme_pgn8n")
-texture = ExtResource("2_r8idx")
-region_rect = Rect2(96, 0, 192, 128)
-
-[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/continueAssignment" to="." method="_on_continue_assignment__on_nine_patch_button_pressed"]
-[connection signal="pressed" from="Control/TextureRect/VBoxContainer/btnPlay" to="Control/TextureRect/VBoxContainer/btnPlay" method="_on_play_btn_pressed"]
-[connection signal="pressed" from="Control/TextureRect/VBoxContainer/btnLore" to="Control/TextureRect/VBoxContainer/btnLore" method="_on_lore_btn_pressed"]
-[connection signal="pressed" from="Control/TextureRect/VBoxContainer/btnLevelSelect" to="Control/TextureRect/VBoxContainer/btnLevelSelect" method="_on_level_select_btn_pressed"]
-[connection signal="pressed" from="Control/TextureRect/VBoxContainer/btnQuit" to="Control/TextureRect/VBoxContainer/btnQuit" method="_on_quit_btn_pressed"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/continueAssignment" to="." method="_on_continue_assignment"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/intelDatabase" to="." method="_on_intel_database"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/assignmentSelection" to="." method="_on_assignment_selection"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/exitInterface" to="." method="_on_exit_interface"]

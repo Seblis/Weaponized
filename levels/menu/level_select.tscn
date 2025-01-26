@@ -1,15 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://u5df1j3l2ry"]
+[gd_scene load_steps=9 format=3 uid="uid://u5df1j3l2ry"]
 
-[ext_resource type="Texture2D" uid="uid://b5jbpo2t8ob1s" path="res://assets/Level_select.png" id="1_ene0m"]
+[ext_resource type="Texture2D" uid="uid://00bm731v25ny" path="res://assets/Home_screen.png" id="1_2ryo4"]
+[ext_resource type="Script" path="res://levels/menu/level_select.gd" id="1_t8tti"]
+[ext_resource type="PackedScene" uid="uid://0acckdtk2uyx" path="res://util/controls/nine_patch_button.tscn" id="2_jqtij"]
+[ext_resource type="Texture2D" uid="uid://cajewvf854bqt" path="res://assets/buttons/ButtonPressed_menu.png" id="3_r848k"]
+[ext_resource type="Texture2D" uid="uid://bv4pe6okt73id" path="res://assets/buttons/Button_menu.png" id="4_13vhk"]
+[ext_resource type="FontFile" uid="uid://n7quuucrm58i" path="res://assets/fonts/manaspace/manaspc.ttf" id="5_me6wy"]
+[ext_resource type="Script" path="res://assets/buttons/valign.gd" id="6_1lg8d"]
 
-[sub_resource type="GDScript" id="GDScript_rwq46"]
-script/source = "extends Button
-
-func _on_back_btn_level_select_pressed():
-	get_tree().change_scene_to_file(\"res://levels/menu/main_menu.tscn\")
-"
+[sub_resource type="RichTextEffect" id="RichTextEffect_r1u1s"]
+script = ExtResource("6_1lg8d")
 
 [node name="LevelSelect" type="Node2D"]
+script = ExtResource("1_t8tti")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -20,7 +23,7 @@ custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("1_ene0m")
+texture = ExtResource("1_2ryo4")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 custom_minimum_size = Vector2(1920, 1080)
@@ -46,108 +49,307 @@ theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 5
 
-[node name="btnLevelSelect" type="Button" parent="Control/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="assignmentOne" parent="Control/VBoxContainer/HBoxContainer/GridContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_jqtij")]
 custom_minimum_size = Vector2(200, 140)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
-text = "LEVEL 1"
-script = SubResource("GDScript_rwq46")
+texture_pressed = ExtResource("3_r848k")
+texture_released = ExtResource("4_13vhk")
+texture_hovered = ExtResource("3_r848k")
+button_rich_label = NodePath("oneLabel")
+set_valign = true
+valign_base = -48
+valign_pressed = -60
 
-[node name="btnLevelSelect2" type="Button" parent="Control/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="oneLabel" type="RichTextLabel" parent="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentOne"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 140)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-text = "LEVEL 3"
-script = SubResource("GDScript_rwq46")
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 140.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_me6wy")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-48]ONE[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
 
-[node name="btnLevelSelect3" type="Button" parent="Control/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="assignmentTwo" parent="Control/VBoxContainer/HBoxContainer/GridContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_jqtij")]
 custom_minimum_size = Vector2(200, 140)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
-text = "LEVEL 5"
-script = SubResource("GDScript_rwq46")
+texture_pressed = ExtResource("3_r848k")
+texture_released = ExtResource("4_13vhk")
+texture_hovered = ExtResource("3_r848k")
+button_rich_label = NodePath("twoLabel")
+set_valign = true
+valign_base = -48
+valign_pressed = -60
 
-[node name="btnLevelSelect4" type="Button" parent="Control/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="twoLabel" type="RichTextLabel" parent="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentTwo"]
 custom_minimum_size = Vector2(200, 140)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-text = "LEVEL 7"
-script = SubResource("GDScript_rwq46")
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 140.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_me6wy")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-48]TWO[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
 
-[node name="btnLevelSelect5" type="Button" parent="Control/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="assignmentThree" parent="Control/VBoxContainer/HBoxContainer/GridContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_jqtij")]
 custom_minimum_size = Vector2(200, 140)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
-text = "LEVEL 9"
-script = SubResource("GDScript_rwq46")
+texture_pressed = ExtResource("3_r848k")
+texture_released = ExtResource("4_13vhk")
+texture_hovered = ExtResource("3_r848k")
+button_rich_label = NodePath("threeLabel")
+set_valign = true
+valign_base = -48
+valign_pressed = -60
 
-[node name="btnLevelSelect6" type="Button" parent="Control/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="threeLabel" type="RichTextLabel" parent="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentThree"]
 custom_minimum_size = Vector2(200, 140)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-text = "LEVEL 2"
-script = SubResource("GDScript_rwq46")
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 140.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_me6wy")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-48]THREE[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
 
-[node name="btnLevelSelect7" type="Button" parent="Control/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="assignmentFour" parent="Control/VBoxContainer/HBoxContainer/GridContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_jqtij")]
 custom_minimum_size = Vector2(200, 140)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
-text = "LEVEL 4"
-script = SubResource("GDScript_rwq46")
+texture_pressed = ExtResource("3_r848k")
+texture_released = ExtResource("4_13vhk")
+texture_hovered = ExtResource("3_r848k")
+button_rich_label = NodePath("fourLabel")
+set_valign = true
+valign_base = -48
+valign_pressed = -60
 
-[node name="btnLevelSelect8" type="Button" parent="Control/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="fourLabel" type="RichTextLabel" parent="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentFour"]
 custom_minimum_size = Vector2(200, 140)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-text = "LEVEL 6"
-script = SubResource("GDScript_rwq46")
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 140.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_me6wy")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-48]FOUR[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
 
-[node name="btnLevelSelect9" type="Button" parent="Control/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="assignmentFive" parent="Control/VBoxContainer/HBoxContainer/GridContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_jqtij")]
 custom_minimum_size = Vector2(200, 140)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
-text = "LEVEL 8"
-script = SubResource("GDScript_rwq46")
+texture_pressed = ExtResource("3_r848k")
+texture_released = ExtResource("4_13vhk")
+texture_hovered = ExtResource("3_r848k")
+button_rich_label = NodePath("fiveLabel")
+set_valign = true
+valign_base = -48
+valign_pressed = -60
 
-[node name="btnLevelSelect10" type="Button" parent="Control/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="fiveLabel" type="RichTextLabel" parent="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentFive"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 140.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_me6wy")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-48]FIVE[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
+
+[node name="assignmentSix" parent="Control/VBoxContainer/HBoxContainer/GridContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_jqtij")]
 custom_minimum_size = Vector2(200, 140)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
-text = "LEVEL 10
-"
-script = SubResource("GDScript_rwq46")
+texture_pressed = ExtResource("3_r848k")
+texture_released = ExtResource("4_13vhk")
+texture_hovered = ExtResource("3_r848k")
+button_rich_label = NodePath("sixLabel")
+set_valign = true
+valign_base = -48
+valign_pressed = -60
+
+[node name="sixLabel" type="RichTextLabel" parent="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentSix"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 140.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_me6wy")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-48]SIX[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
+
+[node name="assignmentSeven" parent="Control/VBoxContainer/HBoxContainer/GridContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_jqtij")]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_pressed = ExtResource("3_r848k")
+texture_released = ExtResource("4_13vhk")
+texture_hovered = ExtResource("3_r848k")
+button_rich_label = NodePath("sevenLabel")
+set_valign = true
+valign_base = -48
+valign_pressed = -60
+
+[node name="sevenLabel" type="RichTextLabel" parent="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentSeven"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 140.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_me6wy")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-48]SEVEN[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
+
+[node name="assignmentEight" parent="Control/VBoxContainer/HBoxContainer/GridContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_jqtij")]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_pressed = ExtResource("3_r848k")
+texture_released = ExtResource("4_13vhk")
+texture_hovered = ExtResource("3_r848k")
+button_rich_label = NodePath("eightLabel")
+set_valign = true
+valign_base = -48
+valign_pressed = -60
+
+[node name="eightLabel" type="RichTextLabel" parent="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentEight"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 140.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_me6wy")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-48]EIGHT[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
+
+[node name="assignmentNine" parent="Control/VBoxContainer/HBoxContainer/GridContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_jqtij")]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_pressed = ExtResource("3_r848k")
+texture_released = ExtResource("4_13vhk")
+texture_hovered = ExtResource("3_r848k")
+button_rich_label = NodePath("nineLabel")
+set_valign = true
+valign_base = -48
+valign_pressed = -60
+
+[node name="nineLabel" type="RichTextLabel" parent="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentNine"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 140.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_me6wy")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-48]NINE[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
+
+[node name="assignmentTen" parent="Control/VBoxContainer/HBoxContainer/GridContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_jqtij")]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_pressed = ExtResource("3_r848k")
+texture_released = ExtResource("4_13vhk")
+texture_hovered = ExtResource("3_r848k")
+button_rich_label = NodePath("ten")
+set_valign = true
+valign_base = -48
+valign_pressed = -60
+
+[node name="ten" type="RichTextLabel" parent="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentTen"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 140.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_me6wy")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-48]TEN[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Control/VBoxContainer"]
 custom_minimum_size = Vector2(1920, 200)
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="backBtnLevelSelect" type="Button" parent="Control/VBoxContainer/HBoxContainer3"]
-custom_minimum_size = Vector2(280, 140)
+[node name="backToMenu" parent="Control/VBoxContainer/HBoxContainer3" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_jqtij")]
+custom_minimum_size = Vector2(252, 96)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
-text = "BACK"
-script = SubResource("GDScript_rwq46")
+texture_pressed = ExtResource("3_r848k")
+texture_released = ExtResource("4_13vhk")
+texture_hovered = ExtResource("3_r848k")
+button_rich_label = NodePath("backLabel")
+set_valign = true
+valign_base = -24
+valign_pressed = -36
 
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect" to="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect" method="_on_quit_btn_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect2" to="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect2" method="_on_quit_btn_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect3" to="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect3" method="_on_quit_btn_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect4" to="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect4" method="_on_quit_btn_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect5" to="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect5" method="_on_quit_btn_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect6" to="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect6" method="_on_quit_btn_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect7" to="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect7" method="_on_quit_btn_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect8" to="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect8" method="_on_quit_btn_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect9" to="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect9" method="_on_quit_btn_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect10" to="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect10" method="_on_quit_btn_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer3/backBtnLevelSelect" to="Control/VBoxContainer/HBoxContainer/GridContainer/btnLevelSelect" method="_on_back_btn_level_select_pressed"]
+[node name="backLabel" type="RichTextLabel" parent="Control/VBoxContainer/HBoxContainer3/backToMenu"]
+custom_minimum_size = Vector2(252, 96)
+layout_mode = 0
+offset_right = 252.0
+offset_bottom = 96.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_me6wy")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-24]BACK[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
+
+[connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentOne" to="." method="_on_assignment_one"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentTwo" to="." method="_on_assignment_two"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentTwo" to="." method="_on_assignment_one"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentThree" to="." method="_on_assignment_three"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentFour" to="." method="_on_assignment_four"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentFive" to="." method="_on_assignment_five"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentSix" to="." method="_on_assignment_six"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentSeven" to="." method="_on_assignment_seven"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentEight" to="." method="_on_assignment_eight"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentNine" to="." method="_on_assignment_nine"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentTen" to="." method="_on_assignment_ten"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer3/backToMenu" to="." method="_on_back_to_menu"]

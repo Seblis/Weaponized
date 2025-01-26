@@ -6,13 +6,12 @@ signal _on_nine_patch_button_pressed()
 @export var texture_pressed: Texture2D
 @export var texture_released: Texture2D
 @export var texture_hovered: Texture2D
-@export var button_text: RichTextLabel
+@export var button_rich_label: RichTextLabel
+@export var set_valign: bool
+@export var valign_base: int
+@export var valign_pressed: int
 
 @onready var nine_patch_rect: NinePatchRect = %NinePatchRect
-@onready var rich_text_label: RichTextLabel = %RichTextLabel
-
-func _process(delta: float):
-	print(nine_patch_rect.texture.resource_name)
 
 func _ready():
 	nine_patch_rect.texture = texture_released
@@ -21,17 +20,15 @@ func _ready():
 func _on_button_pressed():
 	nine_patch_rect.texture = texture_pressed
 	_on_nine_patch_button_pressed.emit()
-	print("pressed")
 
 
 func _on_button_mouse_entered():
 	nine_patch_rect.texture = texture_hovered
-	rich_text_label.text = rich_text_label.text.replace("valign px=-12","valign px=-24")
-	print(rich_text_label.text)
-	print("mouse_entered")
+	if(set_valign):
+		button_rich_label.text = button_rich_label.text.replace("valign px=%d" % valign_base,"valign px=%d" % valign_pressed)
 
 
 func _on_button_mouse_exited():
 	nine_patch_rect.texture = texture_released
-	rich_text_label.text = rich_text_label.text.replace("valign px=-24","valign px=-12")
-	print("mouse_exited")
+	if(set_valign):
+		button_rich_label.text = button_rich_label.text.replace("valign px=%d" % valign_pressed, "valign px=%d" % valign_base)
