@@ -1,15 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://b2bou7crdj5ri"]
 
 [ext_resource type="Script" path="res://levels/background/parallax_background.gd" id="1_kiemq"]
-[ext_resource type="Texture2D" uid="uid://cyosfot6so4ka" path="res://levels/background/cat_space.png" id="2_xm7y1"]
+[ext_resource type="Texture2D" uid="uid://c10fryjdd7pfr" path="res://levels/background/Acid_Side_BG.png" id="2_bo6i0"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource("1_kiemq")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-position = Vector2(967, 537)
+motion_mirroring = Vector2(768, 128)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
-texture = ExtResource("2_xm7y1")
+texture = ExtResource("2_bo6i0")
+centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1920, 1080)
