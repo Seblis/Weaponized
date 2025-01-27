@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://entities/enemies/square/square_enemy.gd" id="1_tbmxh"]
 [ext_resource type="Script" path="res://entities/enemies/square/weapon_manager.gd" id="3_nx2ky"]
 
-[node name="SquareEnemy" type="CharacterBody2D"]
+[node name="SquareEnemy" type="CharacterBody2D" groups=["ENEMY"]]
 script = ExtResource("1_tbmxh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -28,7 +28,7 @@ position = Vector2(27, 0)
 [node name="ShootingPoint4" type="Marker2D" parent="WeaponManager"]
 position = Vector2(0, 27)
 
-[node name="WeaponCooldown" type="Timer" parent="WeaponManager"]
+[node name="WeaponCooldown" type="Timer" parent="WeaponManager" groups=["ENEMY"]]
 wait_time = 0.5
 autostart = true
 

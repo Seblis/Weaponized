@@ -5,14 +5,16 @@ extends CharacterBody2D
 @export var speed = 7
 @export var final_progress_rate = 0.99
 @export var max_hp = 10
+@export_range(0.0, 360.0, 1.0) var rotation_speed = 1.0
 var _current_hp: int = -1
 
-var _initial_movement_finished = false
+var _initial_movement_finished = true
 
 func _ready():
 	_current_hp = 10
 	
 func _physics_process(delta):
+	rotation += rotation_speed * delta
 	if not _initial_movement_finished and path_follow.progress_ratio < final_progress_rate:
 		path_follow.progress += speed
 	else:
@@ -26,6 +28,7 @@ func _physics_process(delta):
 func set_path_follow(path: PathFollow2D, final_progress = 0.99):
 	path_follow = path
 	final_progress_rate = final_progress
+	_initial_movement_finished = false
 	
 func take_damage(damage_value: int):
 	print("Auch, took damage")
@@ -37,5 +40,6 @@ func take_damage(damage_value: int):
 func destroy():
 	hide()
 	GameEngine.enemies_counter(-1)
-	path_follow.call_deferred("queue_free")
+	if path_follow != null:
+		path_follow.call_deferred("queue_free")
 	queue_free()

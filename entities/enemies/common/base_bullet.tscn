@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://ftqs0lwk2f1y"]
+[gd_scene load_steps=4 format=3 uid="uid://ftqs0lwk2f1y"]
 
+[ext_resource type="Script" path="res://entities/enemies/common/base_bullet.gd" id="1_gl0ob"]
 [ext_resource type="Texture2D" uid="uid://dveodpoiuvlfo" path="res://assets/sprites/BaseBullet.png" id="1_hu7pq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d6abr"]
 radius = 9.0
 
 [node name="BaseBullet" type="Area2D"]
+script = ExtResource("1_gl0ob")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)

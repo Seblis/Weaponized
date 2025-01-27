@@ -4,7 +4,7 @@ extends Node2D
 func spawn_enemy(enemy, path_id = 0, stop_point = 0, difficulty = 0, enemy_params = null):
 	var path: Path2D = get_child(path_id)
 	var path_follow = PathFollow2D.new()
-	var new_enemy: BaseEnemy = enemy.instantiate()
+	var new_enemy = enemy.instantiate()
 	new_enemy.set_path_follow(path_follow, stop_point)
 	if enemy_params != null:
 		new_enemy.set_params(enemy_params)
