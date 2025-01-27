@@ -1,16 +1,67 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2bou7crdj5ri"]
+[gd_scene load_steps=4 format=3 uid="uid://b2bou7crdj5ri"]
 
 [ext_resource type="Script" path="res://levels/background/parallax_background.gd" id="1_kiemq"]
+[ext_resource type="Texture2D" uid="uid://bbgeadrbj7bdy" path="res://levels/background/Acid_BG.png" id="2_6splg"]
 [ext_resource type="Texture2D" uid="uid://c10fryjdd7pfr" path="res://levels/background/Acid_Side_BG.png" id="2_bo6i0"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource("1_kiemq")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(768, 128)
+motion_mirroring = Vector2(1920, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
-texture = ExtResource("2_bo6i0")
+texture = ExtResource("2_6splg")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1920, 1080)
+
+[node name="Frames" type="Node2D" parent="ParallaxLayer"]
+
+[node name="LeftFrame" type="Sprite2D" parent="ParallaxLayer/Frames"]
+position = Vector2(67, 382)
+texture = ExtResource("2_bo6i0")
+flip_h = true
+
+[node name="SecondLeftFrame" type="Sprite2D" parent="ParallaxLayer/Frames"]
+position = Vector2(64, 1149)
+texture = ExtResource("2_bo6i0")
+flip_h = true
+
+[node name="TopFrame" type="Sprite2D" parent="ParallaxLayer/Frames"]
+position = Vector2(495, 63)
+rotation = -1.57079
+texture = ExtResource("2_bo6i0")
+
+[node name="SecondTopFrame" type="Sprite2D" parent="ParallaxLayer/Frames"]
+position = Vector2(1253, 63)
+rotation = -1.57079
+texture = ExtResource("2_bo6i0")
+
+[node name="ThirdTopFrame" type="Sprite2D" parent="ParallaxLayer/Frames"]
+position = Vector2(2020, 61)
+rotation = -1.57079
+texture = ExtResource("2_bo6i0")
+
+[node name="BottomFrame" type="Sprite2D" parent="ParallaxLayer/Frames"]
+position = Vector2(475, 1030)
+rotation = 1.57079
+texture = ExtResource("2_bo6i0")
+
+[node name="SecondBottomFrame" type="Sprite2D" parent="ParallaxLayer/Frames"]
+position = Vector2(1233, 1030)
+rotation = 1.57079
+texture = ExtResource("2_bo6i0")
+
+[node name="ThirdBottomFrame" type="Sprite2D" parent="ParallaxLayer/Frames"]
+position = Vector2(2000, 1028)
+rotation = 1.57079
+texture = ExtResource("2_bo6i0")
+
+[node name="RightFrame" type="Sprite2D" parent="ParallaxLayer/Frames"]
+position = Vector2(1854, 382)
+texture = ExtResource("2_bo6i0")
+
+[node name="SecondRightFrame" type="Sprite2D" parent="ParallaxLayer/Frames"]
+position = Vector2(1854, 1140)
+texture = ExtResource("2_bo6i0")
