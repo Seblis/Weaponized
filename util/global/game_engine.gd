@@ -26,7 +26,6 @@ func get_player_position():
 		return null
 
 func enemies_counter(diff):
-	print("Enemies amount changed by")
 	_enemies_count += diff
 	
 	if diff and not _enemies_count:

@@ -1,7 +1,7 @@
 class_name BaseBullet
 extends Area2D
 
-@export var speed = 150
+@export var speed = 100
 @export var damage = 1
 @export var max_range = 1000.0
 

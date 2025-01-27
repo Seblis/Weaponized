@@ -2,7 +2,7 @@ class_name TriangleEnemy
 extends CharacterBody2D
 
 @export var path_follow: PathFollow2D
-@export var speed = 7
+@export var speed = 2
 @export var final_progress_rate = 0.99
 @export var max_hp = 10
 var _current_hp: int = -1
