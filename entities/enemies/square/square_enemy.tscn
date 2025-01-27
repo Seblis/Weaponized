@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://tng70lpkvgdx"]
+
+[ext_resource type="Texture2D" uid="uid://d3iqcpl3u4dlp" path="res://assets/sprites/EnemySquare.png" id="1_ssiv6"]
+
+[node name="SquareEnemy" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ssiv6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-28, 0, 0, -28, 28, 0, 0, 28)
+
+[node name="WeaponManager" type="Node2D" parent="."]
+
+[node name="ShootingPoint" type="Marker2D" parent="WeaponManager"]
+position = Vector2(-27, 0)
+
+[node name="ShootingPoint2" type="Marker2D" parent="WeaponManager"]
+position = Vector2(0, -27)
+
+[node name="ShootingPoint3" type="Marker2D" parent="WeaponManager"]
+position = Vector2(27, 0)
+
+[node name="ShootingPoint4" type="Marker2D" parent="WeaponManager"]
+position = Vector2(0, 27)
+
+[node name="WeaponCooldown" type="Timer" parent="WeaponManager"]
