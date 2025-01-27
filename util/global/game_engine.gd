@@ -9,17 +9,18 @@ const GROUP_PROJECTILE = "GROUP_PROJECTILE"
 const GROUP_AGGRO_RANGE = "GROUP_AGGRO_RANGE"
 
 
-var _player: PlayerShip
+var _player: PlayerShip = null
 var _enemies_count = 0
 
 func set_player(player: PlayerShip):
+	print("Player set to ", player)
 	_player = player
 
 func get_player():
 	return _player
 
 func get_player_position():
-	if _player is PlayerShip:
+	if _player != null:
 		return _player.global_position
 	else:
 		return null

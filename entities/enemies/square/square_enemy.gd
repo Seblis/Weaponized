@@ -6,9 +6,11 @@ extends CharacterBody2D
 @export var final_progress_rate = 0.99
 @export var max_hp = 10
 @export_range(0.0, 360.0, 1.0) var rotation_speed = 1.0
-var _current_hp: int = -1
 
-var _initial_movement_finished = true
+@onready var weapon_cooldown = %WeaponCooldown
+
+var _current_hp: int = -1
+var _initial_movement_finished = false
 
 func _ready():
 	_current_hp = 10
@@ -28,10 +30,8 @@ func _physics_process(delta):
 func set_path_follow(path: PathFollow2D, final_progress = 0.99):
 	path_follow = path
 	final_progress_rate = final_progress
-	_initial_movement_finished = false
 	
 func take_damage(damage_value: int):
-	print("Auch, took damage")
 	_current_hp = clampi(_current_hp - damage_value, 0, max_hp)
 	
 	if not _current_hp:

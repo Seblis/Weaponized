@@ -8,7 +8,7 @@ var max_speed = 600.0
 #var vel = Vector2(0, 0)
 var steering_factor = 3.0
 
-func _on_ready():
+func _ready():
 	GameEngine.set_player(self)
 	_current_health = max_health
 

@@ -29,6 +29,7 @@ position = Vector2(27, 0)
 position = Vector2(0, 27)
 
 [node name="WeaponCooldown" type="Timer" parent="WeaponManager" groups=["ENEMY"]]
+unique_name_in_owner = true
 wait_time = 0.5
 autostart = true
 

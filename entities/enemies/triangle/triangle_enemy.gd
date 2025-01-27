@@ -21,6 +21,11 @@ func _physics_process(delta):
 	# Here we can add additional movement after the wave moved to it's destination
 	if _initial_movement_finished:
 		pass
+		
+	# Rotation part: rotate towards the player?
+	
+	var direction = global_position.direction_to(GameEngine.get_player_position())
+	rotation = direction.angle()
 
 
 func set_path_follow(path: PathFollow2D, final_progress = 0.99):
@@ -28,7 +33,6 @@ func set_path_follow(path: PathFollow2D, final_progress = 0.99):
 	final_progress_rate = final_progress
 	
 func take_damage(damage_value: int):
-	print("Auch, took damage")
 	_current_hp = clampi(_current_hp - damage_value, 0, max_hp)
 	
 	if not _current_hp:
