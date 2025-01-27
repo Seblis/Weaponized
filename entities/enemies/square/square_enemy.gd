@@ -2,7 +2,7 @@ class_name SquareEnemy
 extends CharacterBody2D
 
 @export var path_follow: PathFollow2D
-@export var speed = 7
+@export var speed = 1
 @export var final_progress_rate = 0.99
 @export var max_hp = 10
 @export_range(0.0, 360.0, 1.0) var rotation_speed = 1.0
@@ -25,7 +25,7 @@ func _physics_process(delta):
 	# Here we can add additional movement after the wave moved to it's destination
 	if _initial_movement_finished:
 		pass
-
+	
 
 func set_path_follow(path: PathFollow2D, final_progress = 0.99):
 	path_follow = path
