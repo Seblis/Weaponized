@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bx5u22cwo4qbg"]
+[gd_scene load_steps=3 format=3 uid="uid://bx5u22cwo4qbg"]
 
+[ext_resource type="Script" path="res://entities/enemies/triangle/triangle_enemy.gd" id="1_h66d6"]
 [ext_resource type="Texture2D" uid="uid://cyijuedf3nhbw" path="res://assets/sprites/EnemyTriangle.png" id="1_kdntu"]
 
 [node name="TriangleEnemy" type="CharacterBody2D"]
+script = ExtResource("1_h66d6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -8)
@@ -13,7 +15,7 @@ polygon = PackedVector2Array(0, -28, 32, 19, -31, 19)
 
 [node name="WeaponManager" type="Node2D" parent="."]
 
-[node name="Marker2D" type="Marker2D" parent="WeaponManager"]
+[node name="ShootingPoint" type="Marker2D" parent="WeaponManager"]
 position = Vector2(0, -25)
 
 [node name="WeaponCooldown" type="Timer" parent="WeaponManager"]
