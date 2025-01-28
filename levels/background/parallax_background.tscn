@@ -1,14 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2bou7crdj5ri"]
+[gd_scene load_steps=4 format=3 uid="uid://b2bou7crdj5ri"]
 
 [ext_resource type="Script" path="res://levels/background/parallax_background.gd" id="1_kiemq"]
-[ext_resource type="Texture2D" uid="uid://gu4vu2x5dmyc" path="res://levels/background/Ruby_BG.png" id="2_4p07c"]
 [ext_resource type="Texture2D" uid="uid://bbgeadrbj7bdy" path="res://levels/background/Acid_BG.png" id="2_6splg"]
-[ext_resource type="Texture2D" uid="uid://du44r4j2kg567" path="res://levels/background/Void_Side_BG.png" id="3_njlmj"]
+[ext_resource type="Texture2D" uid="uid://bfdfeqrsqguwa" path="res://levels/background/Acid_Side_BG.png" id="2_bo6i0"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource("1_kiemq")
-background_texture = ExtResource("2_4p07c")
-frame_texture = ExtResource("3_njlmj")
+frame_texture = ExtResource("2_bo6i0")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1920, 1080)
