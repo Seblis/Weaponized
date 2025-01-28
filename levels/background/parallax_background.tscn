@@ -1,18 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://b2bou7crdj5ri"]
 
 [ext_resource type="Script" path="res://levels/background/parallax_background.gd" id="1_kiemq"]
-[ext_resource type="Texture2D" uid="uid://bbgeadrbj7bdy" path="res://levels/background/Acid_BG.png" id="2_6splg"]
-[ext_resource type="Texture2D" uid="uid://bfdfeqrsqguwa" path="res://levels/background/Acid_Side_BG.png" id="2_bo6i0"]
+[ext_resource type="Texture2D" uid="uid://b3x3uclsm0fxa" path="res://levels/background/Ruby_BG.png" id="2_dnvik"]
+[ext_resource type="Texture2D" uid="uid://fvu4j3k30g14" path="res://levels/background/RUBY biom_BG.png" id="3_1dv22"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource("1_kiemq")
-frame_texture = ExtResource("2_bo6i0")
+background_texture = ExtResource("2_dnvik")
+frame_texture = ExtResource("3_1dv22")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1920, 1080)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
-texture = ExtResource("2_6splg")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1920, 1080)

@@ -1,7 +1,7 @@
 extends ParallaxBackground
 
 # if changed remember to update the preload file location path
-@export var background_texture = preload("res://levels/background/Acid_BG.png")
+@export var background_texture: CompressedTexture2D
 @export var frame_texture: CompressedTexture2D
 @export var slide_speed = 200
 
