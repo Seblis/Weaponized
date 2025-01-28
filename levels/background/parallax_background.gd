@@ -6,13 +6,15 @@ extends ParallaxBackground
 @export var slide_speed = 200
 
 @onready var sprite = $ParallaxLayer/Sprite2D
-@onready var left_frame = $ParallaxFrames/LeftFrame
-@onready var right_frame = $ParallaxFrames/RightFrame
+@onready var left_frame = $Frames/LeftFrame
+@onready var right_frame = $Frames/RightFrame
+@onready var frames = $Frames
 func _ready() -> void:
 	sprite.texture = background_texture
-	left_frame.texture = frame_texture
-	right_frame.texture = frame_texture
-	#frames.RightFrame.
+	#left_frame.texture = frame_texture
+	#right_frame.texture = frame_texture
+	for x in frames.get_children():
+		x.texture = frame_texture
 func _physics_process(delta: float) -> void:
 	sprite.region_rect.position.y -= delta * slide_speed
 	# pick correct numbers for Vector2 below
