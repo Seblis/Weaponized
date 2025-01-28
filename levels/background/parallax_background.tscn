@@ -17,17 +17,6 @@ centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1920, 1080)
 
-[node name="ParallaxFrames" type="ParallaxLayer" parent="."]
-visible = false
-motion_mirroring = Vector2(0, 768)
-
-[node name="LeftFrame" type="Sprite2D" parent="ParallaxFrames"]
-position = Vector2(20, 382)
-flip_h = true
-
-[node name="RightFrame" type="Sprite2D" parent="ParallaxFrames"]
-position = Vector2(1854, 382)
-
 [node name="Frames" type="Node2D" parent="."]
 
 [node name="LeftFrame" type="Sprite2D" parent="Frames"]
@@ -64,11 +53,3 @@ position = Vector2(1905, 881)
 
 [node name="RightFrame5" type="Sprite2D" parent="Frames"]
 position = Vector2(1905, 1137)
-
-[node name="RightFrameBackup" type="Sprite2D" parent="Frames"]
-visible = false
-position = Vector2(1854, 382)
-
-[node name="SecondRightFrameBackup" type="Sprite2D" parent="Frames"]
-visible = false
-position = Vector2(1854, 1140)
