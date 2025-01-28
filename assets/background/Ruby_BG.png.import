@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fvu4j3k30g14"
-path="res://.godot/imported/RUBY biom_BG.png-b3e23fe1d360dcf1c7a7630962f23757.ctex"
+uid="uid://b3x3uclsm0fxa"
+path="res://.godot/imported/Ruby_BG.png-4cfa551ee2bb8937a59a2a4869b757c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/background/RUBY biom_BG.png"
-dest_files=["res://.godot/imported/RUBY biom_BG.png-b3e23fe1d360dcf1c7a7630962f23757.ctex"]
+source_file="res://assets/background/Ruby_BG.png"
+dest_files=["res://.godot/imported/Ruby_BG.png-4cfa551ee2bb8937a59a2a4869b757c6.ctex"]
 
 [params]
 

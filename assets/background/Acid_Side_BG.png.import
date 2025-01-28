@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3x3uclsm0fxa"
-path="res://.godot/imported/Ruby_BG.png-bee7402b07359cdec9878a15d1fe8de5.ctex"
+uid="uid://bfdfeqrsqguwa"
+path="res://.godot/imported/Acid_Side_BG.png-9265114fe3ca0502bb0de2f92e175353.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/background/Ruby_BG.png"
-dest_files=["res://.godot/imported/Ruby_BG.png-bee7402b07359cdec9878a15d1fe8de5.ctex"]
+source_file="res://assets/background/Acid_Side_BG.png"
+dest_files=["res://.godot/imported/Acid_Side_BG.png-9265114fe3ca0502bb0de2f92e175353.ctex"]
 
 [params]
 
