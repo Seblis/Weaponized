@@ -11,9 +11,12 @@ const GROUP_AGGRO_RANGE = "GROUP_AGGRO_RANGE"
 
 var _player: PlayerShip = null
 var _enemies_count = 0
+var _score = 0
+
+var _best_score = [0,0,0,0,0,0,0,0,0,0]
 
 func set_player(player: PlayerShip):
-	print("Player set to ", player)
+	#print("Player set to ", player)
 	_player = player
 
 func get_player():
@@ -30,5 +33,17 @@ func enemies_counter(diff):
 	
 	if diff and not _enemies_count:
 		SignalManager.on_wave_defeated.emit()
+		
+		
+func reset(base_score: int = 0):
+	_enemies_count = 0
+	_score = base_score
+	
+func score_penalty(penalty: int):
+	_score -= penalty
+	
+func save_score(level: int, time_bonus):
+	_best_score[level] = max(_best_score[level], _score + time_bonus)
+	# TODO: permanent score saving, maybe some json?
 	
 	

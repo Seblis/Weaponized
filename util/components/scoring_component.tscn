@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvqdtwi6o21eo"]
+
+[ext_resource type="Script" path="res://util/components/scoring_component.gd" id="1_7q33j"]
+
+[node name="ScoringComponent" type="Timer"]
+one_shot = true
+script = ExtResource("1_7q33j")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]
