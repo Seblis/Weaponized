@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://b2bou7crdj5ri"]
 
 [ext_resource type="Script" path="res://util/parallax_background.gd" id="1_kiemq"]
-[ext_resource type="Texture2D" uid="uid://b3x3uclsm0fxa" path="res://assets/background/Ruby_BG.png" id="2_dnvik"]
-[ext_resource type="Texture2D" uid="uid://fvu4j3k30g14" path="res://assets/background/RUBY biom_BG.png" id="3_1dv22"]
+[ext_resource type="Texture2D" uid="uid://bk0k4ppo2rhib" path="res://assets/background/Ruby_BG.png" id="2_dnvik"]
+[ext_resource type="Texture2D" uid="uid://fvu4j3k30g14" path="res://assets/background/RUBY biom_BG.png" id="3_fmr4g"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource("1_kiemq")
 background_texture = ExtResource("2_dnvik")
-frame_texture = ExtResource("3_1dv22")
+frame_texture = ExtResource("3_fmr4g")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1920, 1080)
@@ -21,35 +21,18 @@ region_rect = Rect2(0, 0, 1920, 1080)
 
 [node name="LeftFrame" type="Sprite2D" parent="Frames"]
 position = Vector2(15, 128)
+scale = Vector2(4, 4)
 flip_h = true
 
 [node name="LeftFrame2" type="Sprite2D" parent="Frames"]
-position = Vector2(14, 384)
-flip_h = true
-
-[node name="LeftFrame3" type="Sprite2D" parent="Frames"]
-position = Vector2(15, 627)
-flip_h = true
-
-[node name="LeftFrame4" type="Sprite2D" parent="Frames"]
-position = Vector2(15, 883)
-flip_h = true
-
-[node name="LeftFrame5" type="Sprite2D" parent="Frames"]
-position = Vector2(15, 1139)
+position = Vector2(15, 573)
+scale = Vector2(4, 4)
 flip_h = true
 
 [node name="RightFrame" type="Sprite2D" parent="Frames"]
 position = Vector2(1905, 126)
+scale = Vector2(4, 4)
 
 [node name="RightFrame2" type="Sprite2D" parent="Frames"]
-position = Vector2(1904, 382)
-
-[node name="RightFrame3" type="Sprite2D" parent="Frames"]
-position = Vector2(1905, 625)
-
-[node name="RightFrame4" type="Sprite2D" parent="Frames"]
-position = Vector2(1905, 881)
-
-[node name="RightFrame5" type="Sprite2D" parent="Frames"]
-position = Vector2(1905, 1137)
+position = Vector2(1905, 573)
+scale = Vector2(4, 4)
