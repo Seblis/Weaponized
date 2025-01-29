@@ -342,6 +342,7 @@ scroll_active = false
 custom_effects = [SubResource("RichTextEffect_r1u1s")]
 
 [connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentOne" to="." method="_on_assignment_one"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentTwo" to="." method="_on_assignment_one"]
 [connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentTwo" to="." method="_on_assignment_two"]
 [connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentThree" to="." method="_on_assignment_three"]
 [connection signal="_on_nine_patch_button_pressed" from="Control/VBoxContainer/HBoxContainer/GridContainer/assignmentFour" to="." method="_on_assignment_four"]
