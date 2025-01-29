@@ -1,0 +1,108 @@
+[gd_scene load_steps=12 format=3 uid="uid://d4l0v52t3horn"]
+
+[ext_resource type="Script" path="res://levels/level_4/level_4.gd" id="1_7le8i"]
+[ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/components/PauseMenu/PauseMenu.tscn" id="2_0k8vp"]
+[ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="3_w60ag"]
+[ext_resource type="PackedScene" path="res://util/enemy_manager.tscn" id="4_rj2hs"]
+[ext_resource type="PackedScene" path="res://util/enemy_paths.tscn" id="5_fd3il"]
+
+[sub_resource type="Curve2D" id="Curve2D_mh4ia"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1857.5, 1234.38, 0, 0, 0, 0, 1105.58, 1202.07, 0, 0, 0, 0, 461.662, 1190.02)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_w214n"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1901.51, 1179.79, 0, 0, 0, 0, 1692.57, 1025.84, 0, 0, 0, 0, 1689.27, 1281.18, 0, 0, 0, 0, 1443.61, 1026.03, 0, 0, 0, 0, 1453.28, 1280.24, 0, 0, 0, 0, 1228.22, 1030.08, 0, 0, 0, 0, 1223.51, 1287.07, 0, 0, 0, 0, 1024.51, 1030.47, 0, 0, 0, 0, 1025.58, 1291.41, 0, 0, 0, 0, 808.36, 1031.4, 0, 0, 0, 0, 781.836, 1289.87, 0, 0, 0, 0, 608.251, 1082.95, 0, 0, 0, 0, 603.739, 1294.73, 0, 0, 0, 0, 491.178, 1168.85)
+}
+point_count = 14
+
+[sub_resource type="Curve2D" id="Curve2D_hcgs4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1552.52, 1402.72, 0, 0, 0, 0, 1339.5, 1489.35, 0, 0, 0, 0, 1341.68, 1242.63, 0, 0, 0, 0, 1098.03, 1488.28, 0, 0, 0, 0, 1093.41, 1241.33, 0, 0, 0, 0, 867.173, 1486.09, 0, 0, 0, 0, 880.277, 1238.89, 0, 0, 0, 0, 669.058, 1480.88, 0, 0, 0, 0, 676.388, 1240.17, 0, 0, 0, 0, 423.707, 1477.94, 0, 0, 0, 0, 458.35, 1229.15, 0, 0, 0, 0, 247.301, 1479.15, 0, 0, 0, 0, 261.553, 1278.56, 0, 0, 0, 0, 138.923, 1357.01)
+}
+point_count = 14
+
+[sub_resource type="Curve2D" id="Curve2D_04r4o"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1857.5, 1234.38, 0, 0, 0, 0, 1102.87, 1228.35, 0, 0, 0, 0, 425.092, 1231.4)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_ypdah"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1855.69, 1227.98, 0, 0, 0, 0, 1604.31, 1382.77, 0, 0, 0, 0, 1603.05, 1118.63, 0, 0, 0, 0, 1429.69, 1376.55, 0, 0, 0, 0, 1423.42, 1111.84, 0, 0, 0, 0, 1215.59, 1384.12, 0, 0, 0, 0, 1212.37, 1116.36, 0, 0, 0, 0, 1006.06, 1378.14, 0, 0, 0, 0, 1006.64, 1120.81, 0, 0, 0, 0, 808.347, 1381.7, 0, 0, 0, 0, 792.734, 1113.01, 0, 0, 0, 0, 571.511, 1323.43, 0, 0, 0, 0, 580.523, 1116.83, 0, 0, 0, 0, 420.919, 1223.19)
+}
+point_count = 14
+
+[sub_resource type="Curve2D" id="Curve2D_bk2ci"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1855.69, 1227.98, 0, 0, 0, 0, 1594.97, 1112.14, 0, 0, 0, 0, 1596.98, 1380.81, 0, 0, 0, 0, 1414.77, 1113.99, 0, 0, 0, 0, 1426.69, 1378.01, 0, 0, 0, 0, 1205.88, 1115.72, 0, 0, 0, 0, 1214.63, 1377.03, 0, 0, 0, 0, 1001.48, 1125.05, 0, 0, 0, 0, 1000.62, 1372.42, 0, 0, 0, 0, 786.937, 1118.5, 0, 0, 0, 0, 802.859, 1377.58, 0, 0, 0, 0, 571.559, 1119.6, 0, 0, 0, 0, 567.191, 1328.99, 0, 0, 0, 0, 414.703, 1232.5)
+}
+point_count = 14
+
+[node name="Level4" type="Node2D"]
+script = ExtResource("1_7le8i")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("2_0k8vp")]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1921.0
+offset_bottom = 1077.0
+color = Color(0.258824, 0.360784, 0.866667, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Ship" parent="." instance=ExtResource("3_w60ag")]
+position = Vector2(412, 314)
+
+[node name="EnemyManager" parent="." instance=ExtResource("4_rj2hs")]
+unique_name_in_owner = true
+
+[node name="EnemyPaths" parent="EnemyManager" instance=ExtResource("5_fd3il")]
+unique_name_in_owner = true
+
+[node name="Path2D16" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(255.106, -1724.34)
+rotation = 0.476676
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_mh4ia")
+
+[node name="Path2D17" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(252, -1718)
+rotation = 0.498784
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_w214n")
+
+[node name="Path2D18" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(809.106, -1706.34)
+rotation = 0.476676
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_hcgs4")
+
+[node name="Path2D19" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(-1324, -159)
+rotation = -0.508342
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_04r4o")
+
+[node name="Path2D20" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(-1305, -161)
+rotation = -0.508342
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_ypdah")
+
+[node name="Path2D21" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(-1299, -169)
+rotation = -0.508342
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_bk2ci")

@@ -11,22 +11,15 @@ var base_enemy = preload("res://entities/enemies/BaseEnemy.tscn")
 var waves = [
 	[	
 		#wave 1
-		[base_enemy, 0, 3, 1, 0.07],
-		[base_enemy, 1, 3, 1, 0.07],
-		[base_enemy, 2, 3, 1, 0.07],
-		[base_enemy, 3, 3, 1, 0.07],
+		[base_enemy, 0, 15, 3, 0.03],
+		[base_enemy, 1, 15, 3, 0.03],
+		[base_enemy, 2, 10, 3, 0.06],
 	],
 	[	
 		#wave 2
-		[base_enemy, 4, 3, 1, 0.07],
-		[base_enemy, 5, 3, 1, 0.07],
-		[base_enemy, 6, 3, 1, 0.07],
-	],
-	[	
-		#wave 3
-		[base_enemy, 7, 3, 1, 0.07],
-		[base_enemy, 8, 3, 1, 0.07],
-		[base_enemy, 9, 3, 1, 0.07],
+		[base_enemy, 0, 15, 3, 0.03],
+		[base_enemy, 1, 15, 3, 0.03],
+		[base_enemy, 2, 10, 3, 0.06],
 	],
 ]
 
