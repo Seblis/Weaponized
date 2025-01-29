@@ -7,7 +7,7 @@ extends ParallaxBackground
 
 # Sprite is for background while frames is for left and right frame
 @onready var sprite = $ParallaxLayer/Sprite2D
-@onready var frames = $Frames2
+@onready var frames = $Frames
 
 func _ready() -> void:
 	sprite.texture = background_texture
