@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://b2bou7crdj5ri"]
 
 [ext_resource type="Script" path="res://util/parallax_background.gd" id="1_kiemq"]
-[ext_resource type="Texture2D" uid="uid://b3x3uclsm0fxa" path="res://assets/background/Ruby_BG.png" id="2_dnvik"]
-[ext_resource type="Texture2D" uid="uid://du44r4j2kg567" path="res://assets/background/Void_Side_BG.png" id="3_6bnki"]
+[ext_resource type="Texture2D" uid="uid://bjj0uy5tju6up" path="res://assets/background/Acid_BG.png" id="2_nx5gd"]
+[ext_resource type="Texture2D" uid="uid://bfdfeqrsqguwa" path="res://assets/background/Acid_Side_BG.png" id="3_prxny"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource("1_kiemq")
-background_texture = ExtResource("2_dnvik")
-frame_texture = ExtResource("3_6bnki")
+background_texture = ExtResource("2_nx5gd")
+frame_texture = ExtResource("3_prxny")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1920, 1080)
@@ -59,7 +59,7 @@ position = Vector2(1905, 1137)
 
 [node name="LeftFrame" type="Sprite2D" parent="Frames2"]
 position = Vector2(15, 128)
-scale = Vector2(1, 8)
+scale = Vector2(4, 8)
 flip_h = true
 
 [node name="LeftFrame2" type="Sprite2D" parent="Frames2"]
@@ -84,7 +84,7 @@ flip_h = true
 
 [node name="RightFrame" type="Sprite2D" parent="Frames2"]
 position = Vector2(1905, 126)
-scale = Vector2(1, 8)
+scale = Vector2(4, 8)
 
 [node name="RightFrame2" type="Sprite2D" parent="Frames2"]
 visible = false
