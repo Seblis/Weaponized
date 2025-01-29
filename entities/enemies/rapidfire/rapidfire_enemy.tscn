@@ -24,7 +24,14 @@ script = ExtResource("3_4o1w7")
 position = Vector2(27, 0)
 
 [node name="WeaponCooldown" type="Timer" parent="WeaponManager"]
+unique_name_in_owner = true
 wait_time = 0.4
 autostart = true
 
+[node name="Reload" type="Timer" parent="WeaponManager"]
+unique_name_in_owner = true
+wait_time = 2.5
+one_shot = true
+
 [connection signal="timeout" from="WeaponManager/WeaponCooldown" to="WeaponManager" method="_on_weapon_cooldown_timeout"]
+[connection signal="timeout" from="WeaponManager/Reload" to="WeaponManager" method="_on_reload_timeout"]
