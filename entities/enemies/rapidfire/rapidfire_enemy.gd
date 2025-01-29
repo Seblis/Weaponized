@@ -25,7 +25,7 @@ func _physics_process(delta):
 	# Rotation part: rotate towards the player?
 	
 	var direction = global_position.direction_to(GameEngine.get_player_position())
-	rotation = direction.angle()
+	global_rotation = direction.angle()
 
 
 func set_path_follow(path: PathFollow2D, final_progress = 0.99):
