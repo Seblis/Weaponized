@@ -4,6 +4,7 @@
 
 [node name="ScoringComponent" type="Timer"]
 one_shot = true
+autostart = true
 script = ExtResource("1_7q33j")
 
 [connection signal="timeout" from="." to="." method="_on_timeout"]

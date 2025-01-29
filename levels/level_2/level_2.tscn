@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/components/PauseMenu/PauseMenu.tscn" id="1_1raaf"]
 [ext_resource type="Script" path="res://levels/level_2/level_2.gd" id="1_vjn8p"]
 [ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="2_4sh3m"]
-[ext_resource type="PackedScene" path="res://util/enemy_manager.tscn" id="3_m4t2r"]
-[ext_resource type="PackedScene" path="res://util/enemy_paths.tscn" id="4_w2oxd"]
+[ext_resource type="PackedScene" uid="uid://cngm1eyy7khog" path="res://util/enemy_manager.tscn" id="3_m4t2r"]
+[ext_resource type="PackedScene" uid="uid://cyl3q0blt7u4f" path="res://util/enemy_paths.tscn" id="4_w2oxd"]
 
 [sub_resource type="Curve2D" id="Curve2D_7f456"]
 _data = {

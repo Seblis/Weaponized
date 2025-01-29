@@ -9,9 +9,13 @@ var _score := 0
 
 func _ready():
 	GameEngine.reset(base_score)
+	GameEngine.set_game_timer(self)
 	_score = base_score
 
 
 func _on_timeout():
 	# TODO: Display lose screen
 	pass
+
+func _exit_tree():
+	GameEngine.set_game_timer(null)

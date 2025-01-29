@@ -1,7 +1,7 @@
 extends Node2D
 @onready var enemy_manager: EnemyManager = %EnemyManager
 @onready var pause_menu = $CanvasLayer/PauseMenu
-var base_enemy = preload("res://entities/enemies/BaseEnemy.tscn")
+var base_enemy = preload("res://entities/enemies/base_enemy/base_enemy.tscn")
 
 ##
 #  [enemy_scene, path_id, enemies_amount, delay(s), spacing]
