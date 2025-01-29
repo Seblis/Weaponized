@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://c610i3b0cpoea"]
 
-[ext_resource type="Script" path="res://entities/enemies/triangle/triangle_enemy.gd" id="1_u5vuv"]
+[ext_resource type="Script" path="res://entities/enemies/rapidfire/rapidfire_enemy.gd" id="1_sy5j2"]
 [ext_resource type="Texture2D" uid="uid://s51vbuttduc6" path="res://assets/sprites/EnemyRapidfire.png" id="2_0fsj8"]
 [ext_resource type="Script" path="res://entities/enemies/rapidfire/weapon_manager.gd" id="3_4o1w7"]
 
 [node name="RapidFireEnemy" type="CharacterBody2D" groups=["ENEMY"]]
-script = ExtResource("1_u5vuv")
+script = ExtResource("1_sy5j2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(8, 0)
