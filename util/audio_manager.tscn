@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0ej61qn4eg05"]
+
+[ext_resource type="Script" path="res://util/audio_manager.gd" id="1_w4pna"]
+[ext_resource type="AudioStream" uid="uid://duyqnsmlrv67l" path="res://assets/audio/Projectile.wav" id="2_xrjoy"]
+[ext_resource type="AudioStream" uid="uid://ds84nl6mr8o0j" path="res://assets/audio/MenuSlow.wav" id="3_xe6eh"]
+[ext_resource type="AudioStream" uid="uid://u1rywa5aoeaa" path="res://assets/audio/Combat.wav" id="4_ow7lm"]
+[ext_resource type="AudioStream" uid="uid://bk0l7rsb08cxk" path="res://assets/audio/GameOver.wav" id="5_p5vfp"]
+[ext_resource type="AudioStream" uid="uid://bveanpj7lx67q" path="res://assets/audio/LevelComplete.wav" id="6_fphwy"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_w4pna")
+
+[node name="ProjectileSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_xrjoy")
+
+[node name="MenuSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xe6eh")
+
+[node name="LevelSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ow7lm")
+volume_db = -30.0
+
+[node name="GameOverSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_p5vfp")
+
+[node name="LevelCompleteSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_fphwy")

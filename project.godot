@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameEngine="*res://util/global/game_engine.gd"
 SignalManager="*res://util/global/signal_manager.gd"
+AudioManager="*res://util/audio_manager.tscn"
 
 [display]
 
