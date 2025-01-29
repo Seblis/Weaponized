@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://entities/enemies/square/weapon_manager.gd" id="3_nx2ky"]
 
 [node name="SquareEnemy" type="CharacterBody2D" groups=["ENEMY"]]
+collision_layer = 5
 script = ExtResource("1_tbmxh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

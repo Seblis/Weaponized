@@ -12,6 +12,8 @@ angle_max = 20.3
 gravity = Vector3(0, 98, 0)
 
 [node name="PlayerBullet" type="Area2D"]
+collision_layer = 8
+collision_mask = 4
 script = ExtResource("1_8taym")
 _speed = 670.0
 _max_range = 700.0

@@ -8,6 +8,7 @@ const GROUP_ENEMY_WEAPON = "GROUP_ENEMY_WEAPON"
 const GROUP_PROJECTILE = "GROUP_PROJECTILE"
 const GROUP_AGGRO_RANGE = "GROUP_AGGRO_RANGE"
 
+var damage_penalty := 10
 
 var _player: PlayerShip = null
 var _enemies_count = 0

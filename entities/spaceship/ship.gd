@@ -34,7 +34,7 @@ func _process(delta: float):
 
 func take_damage(damage_amount):
 	_current_health = clampi(_current_health - damage_amount, 0, max_health)
-	GameEngine.score_penalty(10)
+	GameEngine.score_penalty(GameEngine.damage_penalty)
 	
 	if not _current_health:
 		# TODO loss condition, emit signal and handle it

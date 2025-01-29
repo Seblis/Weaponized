@@ -13,6 +13,7 @@ radius = 18.0
 height = 38.0
 
 [node name="Ship" type="CharacterBody2D" groups=["PLAYER"]]
+collision_layer = 3
 motion_mode = 1
 script = ExtResource("1_pvfd2")
 
