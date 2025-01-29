@@ -1,8 +1,8 @@
-class_name BaseEnemy
+class_name RapidfireEnemy
 extends CharacterBody2D
 
 @export var path_follow: PathFollow2D
-@export var speed = 7
+@export var speed = 2
 @export var final_progress_rate = 0.99
 @export var max_hp = 10
 var _current_hp: int = -1
@@ -21,6 +21,11 @@ func _physics_process(delta):
 	# Here we can add additional movement after the wave moved to it's destination
 	if _initial_movement_finished:
 		pass
+		
+	# Rotation part: rotate towards the player?
+	
+	var direction = global_position.direction_to(GameEngine.get_player_position())
+	rotation = direction.angle()
 
 
 func set_path_follow(path: PathFollow2D, final_progress = 0.99):
