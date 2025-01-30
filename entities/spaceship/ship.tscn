@@ -1,7 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://c00a8luwst5da"]
+[gd_scene load_steps=13 format=3 uid="uid://c00a8luwst5da"]
 
 [ext_resource type="Script" path="res://entities/spaceship/ship.gd" id="1_pvfd2"]
-[ext_resource type="PackedScene" uid="uid://duiklrnry7vpi" path="res://util/components/HealthComponent.tscn" id="1_safbe"]
 [ext_resource type="Texture2D" uid="uid://ds0uenly6q3gr" path="res://assets/sprites/Main_character.png" id="2_xr7bw"]
 [ext_resource type="Script" path="res://entities/spaceship/weapon_pivot.gd" id="4_fr8yc"]
 
@@ -85,8 +84,6 @@ sprite_frames = SubResource("SpriteFrames_dqxwr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-7, 0)
 shape = SubResource("CircleShape2D_vioys")
-
-[node name="HealthComponent" parent="." instance=ExtResource("1_safbe")]
 
 [node name="Weapon" type="Node2D" parent="."]
 unique_name_in_owner = true
