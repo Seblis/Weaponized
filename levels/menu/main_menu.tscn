@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cxo1k7f1udtps"]
+[gd_scene load_steps=10 format=3 uid="uid://cxo1k7f1udtps"]
 
 [ext_resource type="Texture2D" uid="uid://00bm731v25ny" path="res://assets/Home_screen.png" id="1_lacbk"]
 [ext_resource type="Script" path="res://levels/menu/main_menu.gd" id="1_yie7d"]
 [ext_resource type="Texture2D" uid="uid://bv4pe6okt73id" path="res://assets/buttons/Button_menu.png" id="2_r8idx"]
 [ext_resource type="FontFile" uid="uid://n7quuucrm58i" path="res://assets/fonts/manaspace/manaspc.ttf" id="3_2k2nj"]
+[ext_resource type="Texture2D" uid="uid://7xvs2v8mu0wi" path="res://assets/Title.png" id="3_itbfd"]
 [ext_resource type="Script" path="res://assets/buttons/valign.gd" id="4_uiw43"]
 [ext_resource type="PackedScene" uid="uid://0acckdtk2uyx" path="res://util/controls/nine_patch_button.tscn" id="5_kbwoc"]
 [ext_resource type="Texture2D" uid="uid://cajewvf854bqt" path="res://assets/buttons/ButtonPressed_menu.png" id="6_osjkh"]
@@ -32,9 +33,10 @@ layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/TextureRect/VBoxContainer"]
-custom_minimum_size = Vector2(0, 400)
+[node name="TextureRect" type="TextureRect" parent="Control/TextureRect/VBoxContainer"]
+custom_minimum_size = Vector2(1920, 400)
 layout_mode = 2
+texture = ExtResource("3_itbfd")
 
 [node name="continueAssignment" parent="Control/TextureRect/VBoxContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("5_kbwoc")]
 custom_minimum_size = Vector2(252, 96)
