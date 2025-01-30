@@ -14,6 +14,7 @@ var _player: PlayerShip = null
 var _enemies_count = 0
 var _score = 0
 var _game_timer
+var _damage_penalty
 
 var _best_score = [0,0,0,0,0,0,0,0,0,0]
 
@@ -41,8 +42,8 @@ func reset(base_score: int = 0):
 	_enemies_count = 0
 	_score = base_score
 	
-func score_penalty(penalty: int):
-	_score -= penalty
+func score_penalty(damage: int):
+	_score -= damage * _damage_penalty
 	
 func save_score(level: int, time_bonus):
 	_best_score[level] = max(_best_score[level], _score + time_bonus)
@@ -56,5 +57,8 @@ func set_game_timer(timer: Timer):
 	
 func get_game_timer():
 	return _game_timer
+	
+func set_damage_penalty(damage_penalty: int):
+	_damage_penalty = damage_penalty
 	
 	
