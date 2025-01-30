@@ -11,37 +11,37 @@
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pblyq"]
 
-[sub_resource type="Curve2D" id="Curve2D_w56wi"]
+[sub_resource type="Curve2D" id="Curve2D_mgd8v"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1857.5, 1234.38, 0, 0, 0, 0, 1105.58, 1202.07, 0, 0, 0, 0, 461.662, 1190.02)
 }
 point_count = 3
 
-[sub_resource type="Curve2D" id="Curve2D_eempa"]
+[sub_resource type="Curve2D" id="Curve2D_8bm5v"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1901.51, 1179.79, 0, 0, 0, 0, 1692.57, 1025.84, 0, 0, 0, 0, 1689.27, 1281.18, 0, 0, 0, 0, 1443.61, 1026.03, 0, 0, 0, 0, 1453.28, 1280.24, 0, 0, 0, 0, 1228.22, 1030.08, 0, 0, 0, 0, 1223.51, 1287.07, 0, 0, 0, 0, 1024.51, 1030.47, 0, 0, 0, 0, 1025.58, 1291.41, 0, 0, 0, 0, 808.36, 1031.4, 0, 0, 0, 0, 781.836, 1289.87, 0, 0, 0, 0, 608.251, 1082.95, 0, 0, 0, 0, 603.739, 1294.73, 0, 0, 0, 0, 491.178, 1168.85)
 }
 point_count = 14
 
-[sub_resource type="Curve2D" id="Curve2D_8saaj"]
+[sub_resource type="Curve2D" id="Curve2D_20e3u"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1552.52, 1402.72, 0, 0, 0, 0, 1339.5, 1489.35, 0, 0, 0, 0, 1341.68, 1242.63, 0, 0, 0, 0, 1098.03, 1488.28, 0, 0, 0, 0, 1093.41, 1241.33, 0, 0, 0, 0, 869.711, 1489.8, 0, 0, 0, 0, 880.277, 1238.89, 0, 0, 0, 0, 669.058, 1480.88, 0, 0, 0, 0, 676.388, 1240.17, 0, 0, 0, 0, 423.707, 1477.94, 0, 0, 0, 0, 458.35, 1229.15, 0, 0, 0, 0, 247.301, 1479.15, 0, 0, 0, 0, 261.553, 1278.56, 0, 0, 0, 0, 138.923, 1357.01)
 }
 point_count = 14
 
-[sub_resource type="Curve2D" id="Curve2D_bo7r0"]
+[sub_resource type="Curve2D" id="Curve2D_hilfq"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1552.52, 1402.72, 0, 0, 0, 0, 1339.5, 1489.35, 0, 0, 0, 0, 1341.68, 1242.63, 0, 0, 0, 0, 1098.03, 1488.28, 0, 0, 0, 0, 1093.41, 1241.33, 0, 0, 0, 0, 869.711, 1489.8, 0, 0, 0, 0, 880.277, 1238.89, 0, 0, 0, 0, 669.058, 1480.88, 0, 0, 0, 0, 676.388, 1240.17, 0, 0, 0, 0, 423.707, 1477.94, 0, 0, 0, 0, 458.35, 1229.15, 0, 0, 0, 0, 247.301, 1479.15, 0, 0, 0, 0, 261.553, 1278.56, 0, 0, 0, 0, 138.923, 1357.01)
 }
 point_count = 14
 
-[sub_resource type="Curve2D" id="Curve2D_ar8wd"]
+[sub_resource type="Curve2D" id="Curve2D_c5lgj"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1552.52, 1402.72, 0, 0, 0, 0, 1339.5, 1489.35, 0, 0, 0, 0, 1341.68, 1242.63, 0, 0, 0, 0, 1098.03, 1488.28, 0, 0, 0, 0, 1093.41, 1241.33, 0, 0, 0, 0, 869.711, 1489.8, 0, 0, 0, 0, 880.277, 1238.89, 0, 0, 0, 0, 669.058, 1480.88, 0, 0, 0, 0, 676.388, 1240.17, 0, 0, 0, 0, 423.707, 1477.94, 0, 0, 0, 0, 458.35, 1229.15, 0, 0, 0, 0, 247.301, 1479.15, 0, 0, 0, 0, 261.553, 1278.56, 0, 0, 0, 0, 138.923, 1357.01)
 }
 point_count = 14
 
-[sub_resource type="Curve2D" id="Curve2D_o4q7x"]
+[sub_resource type="Curve2D" id="Curve2D_p732x"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1857.5, 1234.38, 0, 0, 0, 0, 1105.58, 1202.07, 0, 0, 0, 0, 461.662, 1190.02)
 }
@@ -80,47 +80,47 @@ unique_name_in_owner = true
 [node name="EnemyPaths" parent="GameCanvas/EnemyManager" instance=ExtResource("5_fd3il")]
 unique_name_in_owner = true
 
-[node name="Path2D16" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+[node name="Path2D22" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
 position = Vector2(255.106, -1724.34)
 rotation = 0.476676
 scale = Vector2(1.51339, 1.39626)
 skew = 0.0098573
-curve = SubResource("Curve2D_w56wi")
+curve = SubResource("Curve2D_mgd8v")
 
-[node name="Path2D17" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+[node name="Path2D23" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
 position = Vector2(252, -1718)
 rotation = 0.498784
 scale = Vector2(1.51339, 1.39626)
 skew = 0.0098573
-curve = SubResource("Curve2D_eempa")
+curve = SubResource("Curve2D_8bm5v")
 
-[node name="Path2D18" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+[node name="Path2D24" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
 position = Vector2(809.106, -1706.34)
 rotation = 0.476676
 scale = Vector2(1.51339, 1.39626)
 skew = 0.0098573
-curve = SubResource("Curve2D_8saaj")
+curve = SubResource("Curve2D_20e3u")
 
-[node name="Path2D19" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+[node name="Path2D25" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
 position = Vector2(26, -1646)
 rotation = -0.00158335
 scale = Vector2(1.51339, 1.39626)
 skew = 0.0098573
-curve = SubResource("Curve2D_bo7r0")
+curve = SubResource("Curve2D_hilfq")
 
-[node name="Path2D20" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+[node name="Path2D26" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
 position = Vector2(-80, -836)
 rotation = -0.00304406
 scale = Vector2(1.61435, 1.20826)
 skew = 0.0202848
-curve = SubResource("Curve2D_ar8wd")
+curve = SubResource("Curve2D_c5lgj")
 
-[node name="Path2D21" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+[node name="Path2D27" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
 position = Vector2(-560, -1107)
 rotation = -0.0308166
 scale = Vector2(1.51339, 1.39626)
 skew = 0.0098573
-curve = SubResource("Curve2D_o4q7x")
+curve = SubResource("Curve2D_p732x")
 
 [editable path="Background"]
 [editable path="Frame"]

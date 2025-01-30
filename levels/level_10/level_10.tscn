@@ -1,0 +1,99 @@
+[gd_scene load_steps=14 format=3 uid="uid://dbgl11ketk3sj"]
+
+[ext_resource type="Script" path="res://levels/level_10/level_10.gd" id="1_jlevs"]
+[ext_resource type="PackedScene" uid="uid://b2bou7crdj5ri" path="res://util/parallax_background.tscn" id="2_l0oxk"]
+[ext_resource type="Texture2D" uid="uid://3yywke23yy01" path="res://assets/background/Void_BG.png" id="3_bpir6"]
+[ext_resource type="Texture2D" uid="uid://du44r4j2kg567" path="res://assets/background/Void_Side_BG.png" id="4_yoq4d"]
+[ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/components/PauseMenu/PauseMenu.tscn" id="5_cijpk"]
+[ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="6_lmuyn"]
+[ext_resource type="PackedScene" path="res://util/enemy_manager.tscn" id="7_uthtt"]
+[ext_resource type="PackedScene" path="res://util/enemy_paths.tscn" id="8_fgpt0"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g7vpa"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2lome"]
+
+[sub_resource type="Curve2D" id="Curve2D_bxyuh"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1950, 94, 0, 0, 0, 0, 939, 458, 0, 0, 0, 0, 592, 309, 0, 0, 0, 0, 649, 118, 0, 0, 0, 0, 989, 16, 0, 0, 0, 0, 1268, 123, 0, 0, 0, 0, 1360, 378, 0, 0, 0, 0, 1222.41, 416.787, 0, 0, 0, 0, 939, 511, 0, 0, 0, 0, 573, 354)
+}
+point_count = 10
+
+[sub_resource type="Curve2D" id="Curve2D_l86w0"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1950, 94, 0, 0, 0, 0, 939, 458, 0, 0, 0, 0, 592, 309, 0, 0, 0, 0, 649, 118, 0, 0, 0, 0, 989, 16, 0, 0, 0, 0, 1268, 123, 0, 0, 0, 0, 1360, 378, 0, 0, 0, 0, 1222.41, 416.787, 0, 0, 0, 0, 939, 511, 0, 0, 0, 0, 573, 354)
+}
+point_count = 10
+
+[sub_resource type="Curve2D" id="Curve2D_betvc"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1552.52, 1402.72, 0, 0, 0, 0, 1339.5, 1489.35, 0, 0, 0, 0, 1341.68, 1242.63, 0, 0, 0, 0, 1098.03, 1488.28, 0, 0, 0, 0, 1093.41, 1241.33, 0, 0, 0, 0, 869.711, 1489.8, 0, 0, 0, 0, 880.277, 1238.89, 0, 0, 0, 0, 669.058, 1480.88, 0, 0, 0, 0, 676.388, 1240.17, 0, 0, 0, 0, 423.707, 1477.94, 0, 0, 0, 0, 458.35, 1229.15, 0, 0, 0, 0, 247.301, 1479.15, 0, 0, 0, 0, 261.553, 1278.56, 0, 0, 0, 0, 138.923, 1357.01)
+}
+point_count = 14
+
+[node name="Level10" type="Node2D"]
+script = ExtResource("1_jlevs")
+
+[node name="Background" parent="." instance=ExtResource("2_l0oxk")]
+background_texture = ExtResource("3_bpir6")
+frame_texture = SubResource("CompressedTexture2D_g7vpa")
+
+[node name="Frames" parent="Background" index="1"]
+top_level = true
+
+[node name="Frame" parent="." instance=ExtResource("2_l0oxk")]
+layer = -50
+background_texture = SubResource("CompressedTexture2D_2lome")
+frame_texture = ExtResource("4_yoq4d")
+
+[node name="Frames" parent="Frame" index="1"]
+top_level = true
+
+[node name="PauseCanvas" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="PauseCanvas" instance=ExtResource("5_cijpk")]
+visible = false
+
+[node name="GameCanvas" type="CanvasLayer" parent="."]
+layer = -69
+
+[node name="Ship" parent="GameCanvas" instance=ExtResource("6_lmuyn")]
+position = Vector2(412, 314)
+
+[node name="EnemyManager" parent="GameCanvas" instance=ExtResource("7_uthtt")]
+unique_name_in_owner = true
+
+[node name="EnemyPaths" parent="GameCanvas/EnemyManager" instance=ExtResource("8_fgpt0")]
+unique_name_in_owner = true
+
+[node name="Path2D2" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+position = Vector2(1408, 1653)
+rotation = 4.71357
+curve = SubResource("Curve2D_bxyuh")
+
+[node name="Path2D" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+position = Vector2(716, 1656)
+rotation = -1.5698
+curve = SubResource("Curve2D_bxyuh")
+
+[node name="Path2D3" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+position = Vector2(-15, 1652)
+rotation = -1.5698
+curve = SubResource("Curve2D_l86w0")
+
+[node name="Path2D25" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+position = Vector2(211, -373)
+rotation = -0.00158335
+scale = Vector2(1.20322, 0.890618)
+skew = 0.0098573
+curve = SubResource("Curve2D_betvc")
+
+[node name="Path2D26" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+position = Vector2(2054, 1642)
+rotation = 3.14064
+scale = Vector2(1.44775, 0.79331)
+skew = 0.0222052
+curve = SubResource("Curve2D_betvc")
+
+[editable path="Background"]
+[editable path="Frame"]

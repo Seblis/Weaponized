@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://tng70lpkvgdx"]
 
-[ext_resource type="Texture2D" uid="uid://d3iqcpl3u4dlp" path="res://assets/sprites/EnemySquare.png" id="1_ssiv6"]
+[ext_resource type="Texture2D" uid="uid://bt1drhjrvkupj" path="res://assets/sprites/EnemySquare.png" id="1_ssiv6"]
 [ext_resource type="Script" path="res://entities/enemies/square/square_enemy.gd" id="1_tbmxh"]
 [ext_resource type="Script" path="res://entities/enemies/square/weapon_manager.gd" id="3_nx2ky"]
 
@@ -8,6 +8,7 @@
 script = ExtResource("1_tbmxh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
 texture = ExtResource("1_ssiv6")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

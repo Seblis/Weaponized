@@ -10,6 +10,7 @@ script = ExtResource("1_h66d6")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(8, 0)
 rotation = 1.5708
+scale = Vector2(2, 2)
 texture = ExtResource("1_kdntu")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
