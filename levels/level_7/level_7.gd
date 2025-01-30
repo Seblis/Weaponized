@@ -18,22 +18,24 @@ func _ready():
 	var waves = [
 		[	
 			#wave 1
-			[rapidfire_enemy, 0, 3, 1, 0.07],
-			[rapidfire_enemy, 1, 3, 1, 0.07],
-			[rapidfire_enemy, 2, 3, 1, 0.07],
-			[rapidfire_enemy, 3, 3, 1, 0.07],
+			[rapidfire_enemy, 0, 5, 3, 0.01],
+			[rapidfire_enemy, 1, 5, 3, 0.01],
+			[square_enemy, 2, 3, 3, 0.01],
+			[square_enemy, 3, 3, 3, 0.01],
 		],
 		[	
 			#wave 2
-			[rapidfire_enemy, 4, 4, 1, 0.07],
-			[rapidfire_enemy, 5, 4, 1, 0.07],
-			[rapidfire_enemy, 6, 4, 1, 0.07],
+			[rapidfire_enemy, 2, 6, 2, 0.01],
+			[square_enemy, 2, 6, 2, 0.01],
+			[rapidfire_enemy, 3, 6, 2, 0.01],
+			[square_enemy, 3, 6, 2, 0.01],
 		],
 		[	
 			#wave 3
-			[rapidfire_enemy, 7, 5, 1, 0.07],
-			[rapidfire_enemy, 8, 5, 1, 0.07],
-			[rapidfire_enemy, 9, 5, 1, 0.07],
+			[rapidfire_enemy, 2, 20, 0.4, 0.01],
+			[triangle_enemy, 2, 20, 0.4, 0.01],
+			[rapidfire_enemy, 3, 20, 0.4, 0.01],
+			[triangle_enemy, 3, 20, 0.4, 0.01],
 		],
 	]
 	enemy_manager.supply_waves(waves)

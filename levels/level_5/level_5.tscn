@@ -1,0 +1,128 @@
+[gd_scene load_steps=16 format=3 uid="uid://c5reb8afdhr46"]
+
+[ext_resource type="Script" path="res://levels/level_5/level_5.gd" id="1_7asel"]
+[ext_resource type="PackedScene" uid="uid://b2bou7crdj5ri" path="res://util/parallax_background.tscn" id="1_dk4gi"]
+[ext_resource type="Texture2D" uid="uid://bfdfeqrsqguwa" path="res://assets/background/Acid_Side_BG.png" id="3_p2tal"]
+[ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/components/PauseMenu/PauseMenu.tscn" id="4_1p18a"]
+[ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="5_t5fpu"]
+[ext_resource type="PackedScene" path="res://util/enemy_manager.tscn" id="6_e1gus"]
+[ext_resource type="PackedScene" path="res://util/enemy_paths.tscn" id="7_gvr0i"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xs4lo"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d0lxc"]
+
+[sub_resource type="Curve2D" id="Curve2D_2q33s"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1857.5, 1234.38, 0, 0, 0, 0, 1105.58, 1202.07, 0, 0, 0, 0, 461.662, 1190.02)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_wdjai"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1901.51, 1179.79, 0, 0, 0, 0, 1692.57, 1025.84, 0, 0, 0, 0, 1689.27, 1281.18, 0, 0, 0, 0, 1443.61, 1026.03, 0, 0, 0, 0, 1453.28, 1280.24, 0, 0, 0, 0, 1228.22, 1030.08, 0, 0, 0, 0, 1223.51, 1287.07, 0, 0, 0, 0, 1024.51, 1030.47, 0, 0, 0, 0, 1025.58, 1291.41, 0, 0, 0, 0, 808.36, 1031.4, 0, 0, 0, 0, 781.836, 1289.87, 0, 0, 0, 0, 608.251, 1082.95, 0, 0, 0, 0, 603.739, 1294.73, 0, 0, 0, 0, 491.178, 1168.85)
+}
+point_count = 14
+
+[sub_resource type="Curve2D" id="Curve2D_o7jpa"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1552.52, 1402.72, 0, 0, 0, 0, 1339.5, 1489.35, 0, 0, 0, 0, 1341.68, 1242.63, 0, 0, 0, 0, 1098.03, 1488.28, 0, 0, 0, 0, 1093.41, 1241.33, 0, 0, 0, 0, 867.173, 1486.09, 0, 0, 0, 0, 880.277, 1238.89, 0, 0, 0, 0, 669.058, 1480.88, 0, 0, 0, 0, 676.388, 1240.17, 0, 0, 0, 0, 423.707, 1477.94, 0, 0, 0, 0, 458.35, 1229.15, 0, 0, 0, 0, 247.301, 1479.15, 0, 0, 0, 0, 261.553, 1278.56, 0, 0, 0, 0, 138.923, 1357.01)
+}
+point_count = 14
+
+[sub_resource type="Curve2D" id="Curve2D_7exm1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1857.5, 1234.38, 0, 0, 0, 0, 1102.87, 1228.35, 0, 0, 0, 0, 425.092, 1231.4)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_u2go2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1855.69, 1227.98, 0, 0, 0, 0, 1604.31, 1382.77, 0, 0, 0, 0, 1603.05, 1118.63, 0, 0, 0, 0, 1429.69, 1376.55, 0, 0, 0, 0, 1423.42, 1111.84, 0, 0, 0, 0, 1215.59, 1384.12, 0, 0, 0, 0, 1212.37, 1116.36, 0, 0, 0, 0, 1006.06, 1378.14, 0, 0, 0, 0, 1006.64, 1120.81, 0, 0, 0, 0, 808.347, 1381.7, 0, 0, 0, 0, 792.734, 1113.01, 0, 0, 0, 0, 571.511, 1323.43, 0, 0, 0, 0, 580.523, 1116.83, 0, 0, 0, 0, 420.919, 1223.19)
+}
+point_count = 14
+
+[sub_resource type="Curve2D" id="Curve2D_lhfu4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1855.69, 1227.98, 0, 0, 0, 0, 1594.97, 1112.14, 0, 0, 0, 0, 1596.98, 1380.81, 0, 0, 0, 0, 1414.77, 1113.99, 0, 0, 0, 0, 1426.69, 1378.01, 0, 0, 0, 0, 1205.88, 1115.72, 0, 0, 0, 0, 1214.63, 1377.03, 0, 0, 0, 0, 1001.48, 1125.05, 0, 0, 0, 0, 1000.62, 1372.42, 0, 0, 0, 0, 786.937, 1118.5, 0, 0, 0, 0, 802.859, 1377.58, 0, 0, 0, 0, 571.559, 1119.6, 0, 0, 0, 0, 567.191, 1328.99, 0, 0, 0, 0, 414.703, 1232.5)
+}
+point_count = 14
+
+[node name="Level5" type="Node2D"]
+script = ExtResource("1_7asel")
+
+[node name="Background" parent="." instance=ExtResource("1_dk4gi")]
+frame_texture = SubResource("CompressedTexture2D_xs4lo")
+
+[node name="Frames" parent="Background" index="1"]
+top_level = true
+
+[node name="Frame" parent="." instance=ExtResource("1_dk4gi")]
+layer = -50
+background_texture = SubResource("CompressedTexture2D_d0lxc")
+frame_texture = ExtResource("3_p2tal")
+
+[node name="Frames" parent="Frame" index="1"]
+top_level = true
+
+[node name="PauseCanvas" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="PauseCanvas" instance=ExtResource("4_1p18a")]
+visible = false
+
+[node name="GameCanvas" type="CanvasLayer" parent="."]
+layer = -69
+
+[node name="Ship" parent="GameCanvas" instance=ExtResource("5_t5fpu")]
+position = Vector2(412, 314)
+
+[node name="EnemyManager" parent="GameCanvas" instance=ExtResource("6_e1gus")]
+unique_name_in_owner = true
+
+[node name="EnemyPaths" parent="GameCanvas/EnemyManager" instance=ExtResource("7_gvr0i")]
+unique_name_in_owner = true
+
+[node name="Path2D16" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+position = Vector2(255.106, -1724.34)
+rotation = 0.476676
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_2q33s")
+
+[node name="Path2D17" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+position = Vector2(252, -1718)
+rotation = 0.498784
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_wdjai")
+
+[node name="Path2D18" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+position = Vector2(809.106, -1706.34)
+rotation = 0.476676
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_o7jpa")
+
+[node name="Path2D19" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+position = Vector2(3174.71, 1341.9)
+rotation = -3.62444
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_7exm1")
+
+[node name="Path2D20" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+position = Vector2(3193.71, 1339.9)
+rotation = -3.62444
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_u2go2")
+
+[node name="Path2D21" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+position = Vector2(3199.71, 1331.9)
+rotation = -3.62444
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_lhfu4")
+
+[editable path="Background"]
+[editable path="Frame"]
