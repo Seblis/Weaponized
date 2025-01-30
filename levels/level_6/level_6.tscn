@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=3 uid="uid://brhxjvfapuxx3"]
+
+[ext_resource type="Script" path="res://levels/level_6/level_6.gd" id="1_jph3j"]
+[ext_resource type="PackedScene" uid="uid://b2bou7crdj5ri" path="res://util/parallax_background.tscn" id="1_pwsxq"]
+[ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/components/PauseMenu/PauseMenu.tscn" id="4_i0a4d"]
+[ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="5_ei1mx"]
+[ext_resource type="PackedScene" path="res://util/enemy_manager.tscn" id="6_lhqqa"]
+[ext_resource type="PackedScene" path="res://util/enemy_paths.tscn" id="7_cnlwo"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kkqu2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a2bea"]
+
+[sub_resource type="Curve2D" id="Curve2D_dvb1g"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1816.91, 1245.6, 0, 0, 0, 0, 1209.78, 1254.17, 0, 0, 0, 0, 1151.6, 1325.8, 0, 0, 0, 0, 1077.07, 1365.29, 0, 0, 0, 0, 990.707, 1362.03, 0, 0, 0, 0, 933.906, 1303.24, 0, 0, 0, 0, 892.983, 1226.61, 0, 0, 0, 0, 897.925, 1138.76, 0, 0, 0, 0, 945.972, 1076.88, 0, 0, 0, 0, 1003.01, 1035.07, 0, 0, 0, 0, 1068.19, 1000.83, 0, 0, 0, 0, 1141.71, 1011.33, 0, 0, 0, 0, 1199.1, 1056.01, 0, 0, 0, 0, 1224.91, 1116.84, 0, 0, 0, 0, 1208.82, 1250.66, 0, 0, 0, 0, 1149.29, 1328.71, 0, 0, 0, 0, 1075.08, 1368.85, 0, 0, 0, 0, 985.865, 1356.65, 0, 0, 0, 0, 935.075, 1302.58, 0, 0, 0, 0, 892.983, 1226.61, 0, 0, 0, 0, 891.157, 1140.13, 0, 0, 0, 0, 951.847, 1075.2, 0, 0, 0, 0, 1008.85, 1031.78, 0, 0, 0, 0, 1063.35, 995.452, 0, 0, 0, 0, 1136.83, 1004.35, 0, 0, 0, 0, 1201.4, 1053.09, 0, 0, 0, 0, 1229.07, 1117.74, 0, 0, 0, 0, 1209.99, 1250)
+}
+point_count = 28
+
+[sub_resource type="Curve2D" id="Curve2D_8jxee"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1740.94, 1249.16, 0, 0, 0, 0, 1209.78, 1254.17, 0, 0, 0, 0, 1151.6, 1325.8, 0, 0, 0, 0, 1077.07, 1365.29, 0, 0, 0, 0, 990.707, 1362.03, 0, 0, 0, 0, 933.906, 1303.24, 0, 0, 0, 0, 892.983, 1226.61, 0, 0, 0, 0, 897.925, 1138.76, 0, 0, 0, 0, 945.972, 1076.88, 0, 0, 0, 0, 1003.01, 1035.07, 0, 0, 0, 0, 1068.19, 1000.83, 0, 0, 0, 0, 1141.71, 1011.33, 0, 0, 0, 0, 1199.1, 1056.01, 0, 0, 0, 0, 1224.91, 1116.84, 0, 0, 0, 0, 1208.82, 1250.66, 0, 0, 0, 0, 1149.29, 1328.71, 0, 0, 0, 0, 1075.08, 1368.85, 0, 0, 0, 0, 985.865, 1356.65, 0, 0, 0, 0, 935.075, 1302.58, 0, 0, 0, 0, 892.983, 1226.61, 0, 0, 0, 0, 891.157, 1140.13, 0, 0, 0, 0, 951.847, 1075.2, 0, 0, 0, 0, 1008.85, 1031.78, 0, 0, 0, 0, 1063.35, 995.452, 0, 0, 0, 0, 1136.83, 1004.35, 0, 0, 0, 0, 1201.4, 1053.09, 0, 0, 0, 0, 1229.07, 1117.74, 0, 0, 0, 0, 1209.99, 1250)
+}
+point_count = 28
+
+[sub_resource type="Curve2D" id="Curve2D_icqja"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1761.8, 1236.93, 0, 0, 0, 0, 1209.78, 1254.17, 0, 0, 0, 0, 1151.6, 1325.8, 0, 0, 0, 0, 1077.07, 1365.29, 0, 0, 0, 0, 990.707, 1362.03, 0, 0, 0, 0, 933.906, 1303.24, 0, 0, 0, 0, 892.983, 1226.61, 0, 0, 0, 0, 897.925, 1138.76, 0, 0, 0, 0, 945.972, 1076.88, 0, 0, 0, 0, 1003.01, 1035.07, 0, 0, 0, 0, 1068.19, 1000.83, 0, 0, 0, 0, 1141.71, 1011.33, 0, 0, 0, 0, 1199.1, 1056.01, 0, 0, 0, 0, 1224.91, 1116.84, 0, 0, 0, 0, 1208.82, 1250.66, 0, 0, 0, 0, 1149.29, 1328.71, 0, 0, 0, 0, 1075.08, 1368.85, 0, 0, 0, 0, 985.865, 1356.65, 0, 0, 0, 0, 935.075, 1302.58, 0, 0, 0, 0, 892.983, 1226.61, 0, 0, 0, 0, 891.157, 1140.13, 0, 0, 0, 0, 951.847, 1075.2, 0, 0, 0, 0, 1008.85, 1031.78, 0, 0, 0, 0, 1063.35, 995.452, 0, 0, 0, 0, 1136.83, 1004.35, 0, 0, 0, 0, 1201.4, 1053.09, 0, 0, 0, 0, 1229.07, 1117.74, 0, 0, 0, 0, 1209.99, 1250)
+}
+point_count = 28
+
+[node name="Level6" type="Node2D"]
+script = ExtResource("1_jph3j")
+
+[node name="Background" parent="." instance=ExtResource("1_pwsxq")]
+frame_texture = SubResource("CompressedTexture2D_kkqu2")
+
+[node name="Frames" parent="Background" index="1"]
+top_level = true
+
+[node name="Frame" parent="." instance=ExtResource("1_pwsxq")]
+layer = -50
+background_texture = SubResource("CompressedTexture2D_a2bea")
+
+[node name="Frames" parent="Frame" index="1"]
+top_level = true
+
+[node name="PauseCanvas" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="PauseCanvas" instance=ExtResource("4_i0a4d")]
+visible = false
+
+[node name="GameCanvas" type="CanvasLayer" parent="."]
+layer = -69
+
+[node name="Ship" parent="GameCanvas" instance=ExtResource("5_ei1mx")]
+position = Vector2(412, 314)
+
+[node name="EnemyManager" parent="GameCanvas" instance=ExtResource("6_lhqqa")]
+unique_name_in_owner = true
+
+[node name="EnemyPaths" parent="GameCanvas/EnemyManager" instance=ExtResource("7_cnlwo")]
+unique_name_in_owner = true
+
+[node name="Path2D16" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+position = Vector2(312, -1707)
+rotation = 0.476676
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_dvb1g")
+
+[node name="Path2D17" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+position = Vector2(-1136, -422)
+rotation = -0.394845
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_8jxee")
+
+[node name="Path2D18" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
+position = Vector2(3083, 1395)
+rotation = -3.54769
+scale = Vector2(1.51339, 1.39626)
+skew = 0.0098573
+curve = SubResource("Curve2D_icqja")
+
+[editable path="Background"]
+[editable path="Frame"]
