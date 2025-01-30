@@ -4,6 +4,7 @@ extends Node2D
 @export var bullet_scene = preload("res://entities/spaceship/player_bullet.tscn")
 @onready var _weapon_anchor: Marker2D = %WeaponAnchor
 @onready var weapon_cooldown = %WeaponCooldown
+@onready var sprite_fire: AnimatedSprite2D = %SpriteFire
 
 enum FireState {JUST_PRESSED, PRESSED, RELEASED}
 
@@ -13,8 +14,10 @@ var on_cooldown = false
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("fire"):
 		fire_state = FireState.PRESSED
+		sprite_fire.play("default")
 	elif event.is_action_released("fire"):
 		fire_state = FireState.RELEASED
+		sprite_fire.stop()
 
 #ANCHOR:_process_definition
 func _physics_process(_delta: float) -> void:

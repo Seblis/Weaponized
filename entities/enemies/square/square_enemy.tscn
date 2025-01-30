@@ -1,18 +1,45 @@
-[gd_scene load_steps=4 format=3 uid="uid://tng70lpkvgdx"]
+[gd_scene load_steps=8 format=3 uid="uid://tng70lpkvgdx"]
 
 [ext_resource type="Texture2D" uid="uid://bt1drhjrvkupj" path="res://assets/sprites/EnemySquare.png" id="1_ssiv6"]
 [ext_resource type="Script" path="res://entities/enemies/square/square_enemy.gd" id="1_tbmxh"]
 [ext_resource type="Script" path="res://entities/enemies/square/weapon_manager.gd" id="3_nx2ky"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfsk0"]
+atlas = ExtResource("1_ssiv6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqdxl"]
+atlas = ExtResource("1_ssiv6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yfy2k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfsk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqdxl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ekn84"]
+radius = 31.0161
+
 [node name="SquareEnemy" type="CharacterBody2D" groups=["ENEMY"]]
+collision_layer = 5
 script = ExtResource("1_tbmxh")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
-texture = ExtResource("1_ssiv6")
+sprite_frames = SubResource("SpriteFrames_yfy2k")
+autoplay = "default"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-28, 0, 0, -28, 28, 0, 0, 28)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ekn84")
 
 [node name="WeaponManager" type="Node2D" parent="."]
 script = ExtResource("3_nx2ky")

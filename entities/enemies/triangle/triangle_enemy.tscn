@@ -1,21 +1,48 @@
-[gd_scene load_steps=4 format=3 uid="uid://bx5u22cwo4qbg"]
+[gd_scene load_steps=8 format=3 uid="uid://bx5u22cwo4qbg"]
 
 [ext_resource type="Script" path="res://entities/enemies/triangle/triangle_enemy.gd" id="1_h66d6"]
 [ext_resource type="Texture2D" uid="uid://qf1rtblqn4aq" path="res://assets/sprites/EnemyTriangle.png" id="1_kdntu"]
 [ext_resource type="Script" path="res://entities/enemies/triangle/weapon_manager.gd" id="3_wmrvx"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_attuu"]
+atlas = ExtResource("1_kdntu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c81n2"]
+atlas = ExtResource("1_kdntu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_slpuq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_attuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c81n2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hs25x"]
+radius = 31.0161
+
 [node name="TriangleEnemy" type="CharacterBody2D" groups=["ENEMY"]]
+collision_layer = 5
 script = ExtResource("1_h66d6")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, 0)
 rotation = 1.5708
 scale = Vector2(2, 2)
-texture = ExtResource("1_kdntu")
+sprite_frames = SubResource("SpriteFrames_slpuq")
+autoplay = "default"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-rotation = 1.5708
-polygon = PackedVector2Array(0, -28, 32, 19, -31, 19)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 0)
+shape = SubResource("CircleShape2D_hs25x")
 
 [node name="WeaponManager" type="Node2D" parent="."]
 script = ExtResource("3_wmrvx")

@@ -1,17 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://jjh65dvl1avh"]
+[gd_scene load_steps=18 format=3 uid="uid://jjh65dvl1avh"]
 
 [ext_resource type="Script" path="res://levels/level_8/level_8.gd" id="1_d0ls1"]
 [ext_resource type="PackedScene" uid="uid://b2bou7crdj5ri" path="res://util/parallax_background.tscn" id="2_pd0rc"]
 [ext_resource type="Texture2D" uid="uid://3yywke23yy01" path="res://assets/background/Void_BG.png" id="3_3map2"]
 [ext_resource type="Texture2D" uid="uid://du44r4j2kg567" path="res://assets/background/Void_Side_BG.png" id="4_3wbls"]
+[ext_resource type="PackedScene" path="res://util/level_borders.tscn" id="4_4lgok"]
 [ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/controls/PauseMenu/PauseMenu.tscn" id="5_q1s84"]
 [ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="6_lurkb"]
-[ext_resource type="PackedScene" path="res://util/enemy_manager.tscn" id="7_u30si"]
-[ext_resource type="PackedScene" path="res://util/enemy_paths.tscn" id="8_gckf3"]
+[ext_resource type="PackedScene" uid="uid://cngm1eyy7khog" path="res://util/enemy_manager.tscn" id="7_u30si"]
+[ext_resource type="PackedScene" uid="uid://cyl3q0blt7u4f" path="res://util/enemy_paths.tscn" id="8_gckf3"]
+[ext_resource type="PackedScene" uid="uid://dk5ry0arxjb7r" path="res://util/UI/hud.tscn" id="9_4xyi2"]
+[ext_resource type="PackedScene" path="res://util/game_over.tscn" id="10_bebr2"]
+[ext_resource type="PackedScene" uid="uid://dy74tjkeoc7sh" path="res://util/components/scoring_component.tscn" id="12_iyw64"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3dr0v"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hgwer"]
 
 [sub_resource type="Curve2D" id="Curve2D_kqevv"]
 _data = {
@@ -31,6 +33,8 @@ _data = {
 }
 point_count = 14
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hgwer"]
+
 [node name="Level8" type="Node2D"]
 script = ExtResource("1_d0ls1")
 
@@ -41,56 +45,62 @@ frame_texture = SubResource("CompressedTexture2D_3dr0v")
 [node name="Frames" parent="Background" index="1"]
 top_level = true
 
+[node name="LevelBorders" parent="." instance=ExtResource("4_4lgok")]
+
+[node name="Ship" parent="." instance=ExtResource("6_lurkb")]
+position = Vector2(412, 314)
+
+[node name="EnemyManager" parent="." instance=ExtResource("7_u30si")]
+unique_name_in_owner = true
+
+[node name="EnemyPaths" parent="EnemyManager" instance=ExtResource("8_gckf3")]
+unique_name_in_owner = true
+
+[node name="Path2D2" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(1408, 1653)
+rotation = 4.71357
+curve = SubResource("Curve2D_kqevv")
+
+[node name="Path2D" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(716, 1656)
+rotation = -1.5698
+curve = SubResource("Curve2D_kqevv")
+
+[node name="Path2D3" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(-15, 1652)
+rotation = -1.5698
+curve = SubResource("Curve2D_vd5tw")
+
+[node name="Path2D25" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(446, -531)
+rotation = -0.00158335
+curve = SubResource("Curve2D_wpds2")
+
+[node name="Path2D26" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(1455, 1850)
+rotation = 3.14064
+skew = 0.0222052
+curve = SubResource("Curve2D_wpds2")
+
 [node name="Frame" parent="." instance=ExtResource("2_pd0rc")]
-layer = -50
+layer = 1
 background_texture = SubResource("CompressedTexture2D_hgwer")
 frame_texture = ExtResource("4_3wbls")
 
 [node name="Frames" parent="Frame" index="1"]
 top_level = true
 
+[node name="Hud" parent="." instance=ExtResource("9_4xyi2")]
+
+[node name="DeathScreen" parent="." instance=ExtResource("10_bebr2")]
+
 [node name="PauseCanvas" type="CanvasLayer" parent="."]
+layer = 2
 
 [node name="PauseMenu" parent="PauseCanvas" instance=ExtResource("5_q1s84")]
 visible = false
 
-[node name="GameCanvas" type="CanvasLayer" parent="."]
-layer = -69
-
-[node name="Ship" parent="GameCanvas" instance=ExtResource("6_lurkb")]
-position = Vector2(412, 314)
-
-[node name="EnemyManager" parent="GameCanvas" instance=ExtResource("7_u30si")]
-unique_name_in_owner = true
-
-[node name="EnemyPaths" parent="GameCanvas/EnemyManager" instance=ExtResource("8_gckf3")]
-unique_name_in_owner = true
-
-[node name="Path2D2" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
-position = Vector2(1408, 1653)
-rotation = 4.71357
-curve = SubResource("Curve2D_kqevv")
-
-[node name="Path2D" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
-position = Vector2(716, 1656)
-rotation = -1.5698
-curve = SubResource("Curve2D_kqevv")
-
-[node name="Path2D3" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
-position = Vector2(-15, 1652)
-rotation = -1.5698
-curve = SubResource("Curve2D_vd5tw")
-
-[node name="Path2D25" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
-position = Vector2(446, -531)
-rotation = -0.00158335
-curve = SubResource("Curve2D_wpds2")
-
-[node name="Path2D26" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
-position = Vector2(1455, 1850)
-rotation = 3.14064
-skew = 0.0222052
-curve = SubResource("Curve2D_wpds2")
+[node name="ScoringComponent" parent="." instance=ExtResource("12_iyw64")]
 
 [editable path="Background"]
 [editable path="Frame"]

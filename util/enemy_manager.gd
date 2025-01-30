@@ -24,7 +24,8 @@ func _ready():
 
 func _on_wave_defeated():
 	if _current_wave == _waves_amount:
-		# TODO victory screen
+		SignalManager.on_game_over.emit(true)
+		GameEngine.save_score(1)
 		return
 		
 	_spawn_next_wave()

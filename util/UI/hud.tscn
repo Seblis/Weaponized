@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk5ry0arxjb7r"]
+
+[ext_resource type="Script" path="res://util/UI/time_left.gd" id="1_440kr"]
+[ext_resource type="Script" path="res://util/UI/score.gd" id="2_thyle"]
+
+[node name="Hud" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 176.0
+offset_top = 36.0
+offset_right = 519.0
+offset_bottom = 126.0
+color = Color(0.0941176, 0.0941176, 0.0941176, 0.603922)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 10.0
+offset_right = 114.0
+offset_bottom = 38.0
+text = "Time left: "
+
+[node name="TimeLeft" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 6.0
+offset_right = 242.0
+offset_bottom = 38.0
+text = "00:00"
+script = ExtResource("1_440kr")
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 34.0
+offset_right = 104.0
+offset_bottom = 67.0
+text = "Score: "
+
+[node name="Score" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 31.0
+offset_right = 215.0
+offset_bottom = 58.0
+text = "999999"
+script = ExtResource("2_thyle")

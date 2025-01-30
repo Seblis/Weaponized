@@ -1,38 +1,89 @@
-[gd_scene load_steps=7 format=3 uid="uid://c00a8luwst5da"]
+[gd_scene load_steps=13 format=3 uid="uid://c00a8luwst5da"]
 
 [ext_resource type="Script" path="res://entities/spaceship/ship.gd" id="1_pvfd2"]
-[ext_resource type="PackedScene" uid="uid://duiklrnry7vpi" path="res://util/components/Health/HealthComponent.tscn" id="1_safbe"]
-[ext_resource type="PackedScene" uid="uid://bgward60w0t5c" path="res://util/components/Hurtbox/HurtboxComponent.tscn" id="2_gxgmd"]
+[ext_resource type="Texture2D" uid="uid://ds0uenly6q3gr" path="res://assets/sprites/Main_character.png" id="2_xr7bw"]
 [ext_resource type="Script" path="res://entities/spaceship/weapon_pivot.gd" id="4_fr8yc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jaop"]
-size = Vector2(40, 40)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ls0k0"]
+atlas = ExtResource("2_xr7bw")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8r75n"]
-radius = 18.0
-height = 38.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_506x3"]
+atlas = ExtResource("2_xr7bw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jp1m0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ls0k0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_506x3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v063n"]
+atlas = ExtResource("2_xr7bw")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8geto"]
+atlas = ExtResource("2_xr7bw")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arg0p"]
+atlas = ExtResource("2_xr7bw")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psjhj"]
+atlas = ExtResource("2_xr7bw")
+region = Rect2(32, 128, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dqxwr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v063n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8geto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arg0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psjhj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vioys"]
+radius = 23.0
 
 [node name="Ship" type="CharacterBody2D" groups=["PLAYER"]]
+collision_layer = 3
+collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_pvfd2")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-color = Color(0, 0.815686, 0.333333, 1)
+[node name="SpriteMain" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_jp1m0")
+autoplay = "default"
+
+[node name="SpriteFire" type="AnimatedSprite2D" parent="SpriteMain"]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_dqxwr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_2jaop")
-
-[node name="HealthComponent" parent="." instance=ExtResource("1_safbe")]
-
-[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health") instance=ExtResource("2_gxgmd")]
-health = NodePath("../HealthComponent")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtboxComponent"]
-shape = SubResource("CapsuleShape2D_8r75n")
+position = Vector2(-7, 0)
+shape = SubResource("CircleShape2D_vioys")
 
 [node name="Weapon" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -40,17 +91,10 @@ script = ExtResource("4_fr8yc")
 
 [node name="WeaponAnchor" type="Marker2D" parent="Weapon"]
 unique_name_in_owner = true
-position = Vector2(20, 0)
+position = Vector2(32, 0)
 
 [node name="WeaponCooldown" type="Timer" parent="Weapon"]
 unique_name_in_owner = true
 wait_time = 0.25
-
-[node name="ColorRect" type="ColorRect" parent="Weapon"]
-offset_left = 17.0
-offset_top = -3.0
-offset_right = 23.0
-offset_bottom = 3.0
-color = Color(0.0846899, 0.0846899, 0.0846899, 1)
 
 [connection signal="timeout" from="Weapon/WeaponCooldown" to="Weapon" method="cooldown_finished"]
