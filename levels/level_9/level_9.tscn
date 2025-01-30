@@ -1,17 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://b6amng0xxc5tn"]
+[gd_scene load_steps=20 format=3 uid="uid://b6amng0xxc5tn"]
 
 [ext_resource type="Script" path="res://levels/level_9/level_9.gd" id="1_kip5s"]
 [ext_resource type="PackedScene" uid="uid://b2bou7crdj5ri" path="res://util/parallax_background.tscn" id="2_sliep"]
 [ext_resource type="Texture2D" uid="uid://3yywke23yy01" path="res://assets/background/Void_BG.png" id="3_fgf2w"]
+[ext_resource type="PackedScene" path="res://util/level_borders.tscn" id="4_0r8j0"]
 [ext_resource type="Texture2D" uid="uid://du44r4j2kg567" path="res://assets/background/Void_Side_BG.png" id="4_g4gfm"]
 [ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/controls/PauseMenu/PauseMenu.tscn" id="5_x4tig"]
 [ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="6_kircu"]
-[ext_resource type="PackedScene" path="res://util/enemy_manager.tscn" id="7_eh7jx"]
-[ext_resource type="PackedScene" path="res://util/enemy_paths.tscn" id="8_nvxo7"]
+[ext_resource type="PackedScene" uid="uid://cngm1eyy7khog" path="res://util/enemy_manager.tscn" id="7_eh7jx"]
+[ext_resource type="PackedScene" uid="uid://cyl3q0blt7u4f" path="res://util/enemy_paths.tscn" id="8_nvxo7"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n2esb"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ui2la"]
 
 [sub_resource type="Curve2D" id="Curve2D_w7t5f"]
 _data = {
@@ -61,6 +60,8 @@ _data = {
 }
 point_count = 3
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ui2la"]
+
 [node name="Level9" type="Node2D"]
 script = ExtResource("1_kip5s")
 
@@ -71,8 +72,61 @@ frame_texture = SubResource("CompressedTexture2D_n2esb")
 [node name="Frames" parent="Background" index="1"]
 top_level = true
 
+[node name="LevelBorders" parent="." instance=ExtResource("4_0r8j0")]
+
+[node name="Ship" parent="." instance=ExtResource("6_kircu")]
+position = Vector2(412, 314)
+
+[node name="EnemyManager" parent="." instance=ExtResource("7_eh7jx")]
+unique_name_in_owner = true
+
+[node name="EnemyPaths" parent="EnemyManager" instance=ExtResource("8_nvxo7")]
+unique_name_in_owner = true
+
+[node name="Path2D13" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(1057, -1290)
+rotation = 1.57912
+curve = SubResource("Curve2D_w7t5f")
+
+[node name="Path2D10" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(317, 1970)
+rotation = -1.57456
+curve = SubResource("Curve2D_f2rq0")
+
+[node name="Path2D14" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(945, 2256)
+rotation = 4.71598
+curve = SubResource("Curve2D_vk8gb")
+
+[node name="Path2D11" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(1666.71, -1038.23)
+rotation = 1.56231
+curve = SubResource("Curve2D_nxqes")
+
+[node name="Path2D15" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(3100, 1029)
+rotation = 3.15833
+curve = SubResource("Curve2D_sg42g")
+
+[node name="Path2D12" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(-948, 172)
+rotation = 0.00465261
+skew = 0.0174533
+curve = SubResource("Curve2D_6hs41")
+
+[node name="Path2D16" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(-1182.29, 64.1118)
+rotation = 6.29557
+curve = SubResource("Curve2D_rorcs")
+
+[node name="Path2D17" type="Path2D" parent="EnemyManager/EnemyPaths"]
+position = Vector2(2869.4, 903.502)
+rotation = 3.1419
+skew = 0.0174533
+curve = SubResource("Curve2D_ggaw3")
+
 [node name="Frame" parent="." instance=ExtResource("2_sliep")]
-layer = -50
+layer = 1
 background_texture = SubResource("CompressedTexture2D_ui2la")
 frame_texture = ExtResource("4_g4gfm")
 
@@ -80,63 +134,10 @@ frame_texture = ExtResource("4_g4gfm")
 top_level = true
 
 [node name="PauseCanvas" type="CanvasLayer" parent="."]
+layer = 2
 
 [node name="PauseMenu" parent="PauseCanvas" instance=ExtResource("5_x4tig")]
 visible = false
-
-[node name="GameCanvas" type="CanvasLayer" parent="."]
-layer = -69
-
-[node name="Ship" parent="GameCanvas" instance=ExtResource("6_kircu")]
-position = Vector2(412, 314)
-
-[node name="EnemyManager" parent="GameCanvas" instance=ExtResource("7_eh7jx")]
-unique_name_in_owner = true
-
-[node name="EnemyPaths" parent="GameCanvas/EnemyManager" instance=ExtResource("8_nvxo7")]
-unique_name_in_owner = true
-
-[node name="Path2D13" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
-position = Vector2(1057, -1290)
-rotation = 1.57912
-curve = SubResource("Curve2D_w7t5f")
-
-[node name="Path2D10" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
-position = Vector2(317, 1970)
-rotation = -1.57456
-curve = SubResource("Curve2D_f2rq0")
-
-[node name="Path2D14" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
-position = Vector2(945, 2256)
-rotation = 4.71598
-curve = SubResource("Curve2D_vk8gb")
-
-[node name="Path2D11" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
-position = Vector2(1666.71, -1038.23)
-rotation = 1.56231
-curve = SubResource("Curve2D_nxqes")
-
-[node name="Path2D15" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
-position = Vector2(3100, 1029)
-rotation = 3.15833
-curve = SubResource("Curve2D_sg42g")
-
-[node name="Path2D12" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
-position = Vector2(-948, 172)
-rotation = 0.00465261
-skew = 0.0174533
-curve = SubResource("Curve2D_6hs41")
-
-[node name="Path2D16" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
-position = Vector2(-1182.29, 64.1118)
-rotation = 6.29557
-curve = SubResource("Curve2D_rorcs")
-
-[node name="Path2D17" type="Path2D" parent="GameCanvas/EnemyManager/EnemyPaths"]
-position = Vector2(2869.4, 903.502)
-rotation = 3.1419
-skew = 0.0174533
-curve = SubResource("Curve2D_ggaw3")
 
 [editable path="Background"]
 [editable path="Frame"]
