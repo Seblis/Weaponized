@@ -13,7 +13,7 @@ var damage_penalty := 10
 var _player: PlayerShip = null
 var _enemies_count = 0
 var _score = 0
-var _game_timer
+var _game_timer: Timer
 var _damage_penalty = 0
 
 var _best_score = [0,0,0,0,0,0,0,0,0,0]
@@ -45,8 +45,8 @@ func reset(base_score: int = 0):
 func score_penalty(damage: int):
 	_score -= damage * _damage_penalty
 	
-func save_score(level: int, time_bonus):
-	_best_score[level] = max(_best_score[level], _score + time_bonus)
+func save_score(level: int):
+	_best_score[level] = max(_best_score[level], _score + _game_timer.time_left)
 	# TODO: permanent score saving, maybe some json?
 	
 func get_score():
