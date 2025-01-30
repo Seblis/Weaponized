@@ -2,24 +2,6 @@ extends TextEdit
 
 @onready var lore_window: TextEdit = %TextEdit
 
-var lore_intro = [
-	"The first planet I was ordered to infiltrate was venus, of course. Fortunately humans put the most dangerous troops at the edge of solar system, protecting against invasions from outside - that'll make my job easier... for a time.
-
-Luckily we have some good intel about Venus contribution to Mjölnir, as the humanity called their new weapon we are so afraid of. Quick search through the old databases allowed me to check it's a name of a hammer belonging to a popular mythological person. The ages are passing, but people are still hung up on the past.
-",
-
-
-"Venus has one of the most unfriendly atmospheres in the solar system. The planet itself is a bit similar to the earth, but constant acid rains and the composition of the atmosphere are unforgiving for the living organisms. Humans already managed to conver a huge portion of the planet to a place where they can thrive, but there are large areas where machines with special anti-corrosion shells are a necessity. It's easy to guess that I am prepared for such problems - time to tackle the main objective of the first huge mission.",
-
-
-"Venus is conquered. It's a first of many victories required to complete the mission, but it's an important one. Humans always worry about starts of their journeys, and I see my Creators' internal messages calming down just a bit.
-
-We got an important part of Mjölnir,  description_of_the_first_upgrade. Due to close proximity of the planet, the Creators had a good idea of what it does, and made me compatible with it. It will allow me to fight the tougher challenges waiting for us in the future.
-
-Off to a good start.
-"
-]
-
 func _ready():
 	%TextEdit.text = "	PLEASE PICK RECORD FROM INTEL DATABASE"
 
@@ -41,3 +23,46 @@ Apparently, people on other planets wasted their seemingly infinite resources an
 The Coalition, as the non-mercurians called themselves collectively, is preparing a weapon of mass destruction, designed to kill all mercurians and take over the planet.
 
 I MUST find this weapon, no matter the price. The lives of my creators are at stake."
+
+
+func _on_assignment_one():
+	%TextEdit.text = "The first planet I was ordered to infiltrate was Venus, of course. Fortunately humans put the most dangerous troops at the edge of solar system, protecting against invasions from outside - that'll make my job easier... for a time.
+
+Luckily we have some good intel about Venus contribution to Mjölnir, as the humanity called their new weapon we are so afraid of. Quick search through the old databases allowed me to check it's a name of a hammer belonging to a popular mythological person. The ages are passing, but people are still hung up on the past.
+"
+
+
+func _on_assignment_two():
+	%TextEdit.text = "Venus has one of the most unfriendly atmospheres in the solar system. The planet itself is a bit similar to the earth, but constant acid rains and the composition of the atmosphere are unforgiving for the living organisms. Humans already managed to conver a huge portion of the planet to a place where they can thrive, but there are large areas where machines with special anti-corrosion shells are a necessity. It's easy to guess that I am prepared for such problems - time to tackle the main objective of the first huge mission."
+
+
+func _on_assignment_three():
+	%TextEdit.text = "Venus is conquered. It's a first of many victories required to complete the mission, but it's an important one. Humans always worry about starts of their journeys, and I see my Creators' internal messages calming down just a bit.
+
+We got an important part of Mjölnir,  description_of_the_first_upgrade. Due to close proximity of the planet, the Creators had a good idea of what it does, and made me compatible with it. It will allow me to fight the tougher challenges waiting for us in the future.
+
+Off to a good start.
+"
+
+func _on_assignment_four():
+	_to_be_continued()
+	
+func _on_assignment_five():
+	_to_be_continued()
+	
+func _on_assignment_six():
+	_to_be_continued()
+	
+func _on_assignment_seven():
+	_to_be_continued()
+func _on_assignment_eight():
+	_to_be_continued()
+	
+func _on_assignment_nine():
+	_to_be_continued()
+	
+func _on_assignment_ten():
+	_to_be_continued()
+	
+func _to_be_continued():
+	%TextEdit.text = "TO BE CONTINUED :/"

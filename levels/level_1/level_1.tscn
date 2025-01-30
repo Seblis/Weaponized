@@ -2,15 +2,15 @@
 
 [ext_resource type="Script" path="res://levels/level_1/level_1.gd" id="1_d4hc3"]
 [ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="1_kp36w"]
-[ext_resource type="PackedScene" uid="uid://cyl3q0blt7u4f" path="res://util/enemy_paths.tscn" id="2_4ry2s"]
+[ext_resource type="PackedScene" path="res://util/enemy_paths.tscn" id="2_4ry2s"]
 [ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/controls/PauseMenu/PauseMenu.tscn" id="2_6xkid"]
 [ext_resource type="PackedScene" uid="uid://b2bou7crdj5ri" path="res://util/parallax_background.tscn" id="2_ios20"]
 [ext_resource type="PackedScene" uid="uid://cngm1eyy7khog" path="res://util/enemy_manager.tscn" id="2_wup08"]
 [ext_resource type="Texture2D" uid="uid://bjj0uy5tju6up" path="res://assets/background/Acid_BG.png" id="3_ahdra"]
-[ext_resource type="PackedScene" path="res://util/level_borders.tscn" id="4_4kyie"]
+[ext_resource type="PackedScene" uid="uid://dj4fvgyopn6mg" path="res://util/level_borders.tscn" id="4_4kyie"]
 [ext_resource type="Texture2D" uid="uid://bfdfeqrsqguwa" path="res://assets/background/Acid_Side_BG.png" id="4_dpfvv"]
 [ext_resource type="PackedScene" uid="uid://dk5ry0arxjb7r" path="res://util/UI/hud.tscn" id="9_w83rc"]
-[ext_resource type="PackedScene" path="res://util/game_over.tscn" id="10_h7cad"]
+[ext_resource type="PackedScene" uid="uid://cekvrrpspxf05" path="res://util/game_over.tscn" id="10_h7cad"]
 [ext_resource type="PackedScene" uid="uid://dy74tjkeoc7sh" path="res://util/components/scoring_component.tscn" id="11_urrly"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qpy8x"]

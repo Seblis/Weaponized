@@ -122,6 +122,32 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 0
 
+[node name="introductoryAssignment" parent="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_hxap3")]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_pressed = ExtResource("3_ktdej")
+texture_released = ExtResource("4_6tyyo")
+texture_hovered = ExtResource("3_ktdej")
+button_rich_label = NodePath("introLabel")
+set_valign = true
+valign_base = -10
+valign_pressed = -20
+
+[node name="introLabel" type="RichTextLabel" parent="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer/introductoryAssignment"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 60.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_tlfxa")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-10]INTRO[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
+
 [node name="assignmentOne" parent="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_hxap3")]
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
@@ -383,32 +409,6 @@ text = "[center][valign px=-10]TEN[/valign][/center]"
 scroll_active = false
 custom_effects = [SubResource("RichTextEffect_r1u1s")]
 
-[node name="introductoryAssignment" parent="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_hxap3")]
-custom_minimum_size = Vector2(200, 60)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-texture_pressed = ExtResource("3_ktdej")
-texture_released = ExtResource("4_6tyyo")
-texture_hovered = ExtResource("3_ktdej")
-button_rich_label = NodePath("introLabel")
-set_valign = true
-valign_base = -10
-valign_pressed = -20
-
-[node name="introLabel" type="RichTextLabel" parent="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer/introductoryAssignment"]
-custom_minimum_size = Vector2(200, 60)
-layout_mode = 0
-offset_right = 200.0
-offset_bottom = 60.0
-mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("5_tlfxa")
-theme_override_font_sizes/normal_font_size = 30
-bbcode_enabled = true
-text = "[center][valign px=-10]INTRO[/valign][/center]"
-scroll_active = false
-custom_effects = [SubResource("RichTextEffect_r1u1s")]
-
 [node name="HBoxContainer3" type="HBoxContainer" parent="Control/TextureRect/VBoxContainer"]
 custom_minimum_size = Vector2(1920, 200)
 layout_mode = 2
@@ -441,4 +441,14 @@ scroll_active = false
 custom_effects = [SubResource("RichTextEffect_r1u1s")]
 
 [connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer/introductoryAssignment" to="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer2/NinePatchRect/TextEdit" method="_on_introductory_assignment"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer/assignmentOne" to="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer2/NinePatchRect/TextEdit" method="_on_assignment_one"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer/assignmentTwo" to="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer2/NinePatchRect/TextEdit" method="_on_assignment_two"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer/assignmentThree" to="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer2/NinePatchRect/TextEdit" method="_on_assignment_three"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer/assignmentFour" to="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer2/NinePatchRect/TextEdit" method="_on_assignment_four"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer/assignmentFive" to="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer2/NinePatchRect/TextEdit" method="_on_assignment_five"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer/assignmentSix" to="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer2/NinePatchRect/TextEdit" method="_on_assignment_six"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer/assignmentSeven" to="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer2/NinePatchRect/TextEdit" method="_on_assignment_seven"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer/assignmentEight" to="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer2/NinePatchRect/TextEdit" method="_on_assignment_eight"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer/assignmentNine" to="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer2/NinePatchRect/TextEdit" method="_on_assignment_nine"]
+[connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer/GridContainer/assignmentTen" to="Control/TextureRect/VBoxContainer/HBoxContainer4/HBoxContainer/VBoxContainer2/NinePatchRect/TextEdit" method="_on_assignment_ten"]
 [connection signal="_on_nine_patch_button_pressed" from="Control/TextureRect/VBoxContainer/HBoxContainer3/backToMenu" to="." method="_on_back_to_menu"]
