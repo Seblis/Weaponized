@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b8hupw1115cnr"]
+[gd_scene load_steps=18 format=3 uid="uid://b8hupw1115cnr"]
 
 [ext_resource type="Script" path="res://levels/level_3/level_3.gd" id="1_thydp"]
 [ext_resource type="PackedScene" uid="uid://b2bou7crdj5ri" path="res://util/parallax_background.tscn" id="2_8cr6a"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bfdfeqrsqguwa" path="res://assets/background/Acid_Side_BG.png" id="4_gxaf1"]
 [ext_resource type="PackedScene" uid="uid://cngm1eyy7khog" path="res://util/enemy_manager.tscn" id="4_jkhot"]
 [ext_resource type="PackedScene" uid="uid://cyl3q0blt7u4f" path="res://util/enemy_paths.tscn" id="5_32t2v"]
+[ext_resource type="PackedScene" uid="uid://dk5ry0arxjb7r" path="res://util/UI/hud.tscn" id="9_eq7if"]
+[ext_resource type="PackedScene" path="res://util/game_over.tscn" id="10_amse1"]
+[ext_resource type="PackedScene" uid="uid://dy74tjkeoc7sh" path="res://util/components/scoring_component.tscn" id="12_jfwcv"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hovld"]
 
@@ -92,11 +95,17 @@ frame_texture = ExtResource("4_gxaf1")
 [node name="Frames" parent="Frame" index="1"]
 top_level = true
 
+[node name="Hud" parent="." instance=ExtResource("9_eq7if")]
+
+[node name="DeathScreen" parent="." instance=ExtResource("10_amse1")]
+
 [node name="PauseCanvas" type="CanvasLayer" parent="."]
 layer = 2
 
 [node name="PauseMenu" parent="PauseCanvas" instance=ExtResource("2_773jd")]
 visible = false
+
+[node name="ScoringComponent" parent="." instance=ExtResource("12_jfwcv")]
 
 [editable path="Background"]
 [editable path="Frame"]
