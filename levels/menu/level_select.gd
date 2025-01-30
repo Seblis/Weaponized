@@ -15,12 +15,10 @@ func _on_assignment_four():
 	get_tree().change_scene_to_file("res://levels/level_4/level_4.tscn")
 
 func _on_assignment_five():
-	#get_tree().change_scene_to_file("res://levels/level_5/level_5.tscn")
-	pass
+	get_tree().change_scene_to_file("res://levels/level_5/level_5.tscn")
 	
 func _on_assignment_six():
-	#get_tree().change_scene_to_file("res://levels/level_6/level_6.tscn")
-	pass
+	get_tree().change_scene_to_file("res://levels/level_6/level_6.tscn")
 
 func _on_assignment_seven():
 	#get_tree().change_scene_to_file("res://levels/level_7/level_7.tscn")
