@@ -1,12 +1,12 @@
 class_name PlayerShip
 extends CharacterBody2D
 
-@export var max_health = 5
+@export var max_health = 500
 var _current_health
 
 var max_speed = 600.0
 #var vel = Vector2(0, 0)
-var steering_factor = 3.0
+var steering_factor = 5.0
 
 func _ready():
 	GameEngine.set_player(self)
@@ -37,5 +37,4 @@ func take_damage(damage_amount):
 	GameEngine.score_penalty(GameEngine.damage_penalty)
 	
 	if not _current_health:
-		# TODO loss condition, emit signal and handle it
-		pass
+		SignalManager.on_game_over.emit(false)

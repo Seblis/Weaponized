@@ -3,7 +3,7 @@ extends Area2D
 
 @export var speed = 100
 @export var damage = 10
-@export var max_range = 1000.0
+@export var max_range = 2000.0
 
 var _traveled_distance = 0.0
 var _momentum: Vector2 = Vector2.ZERO
@@ -25,7 +25,7 @@ func destroy():
 	
 	
 func set_momentum(momentum: Vector2):
-	_momentum = momentum
+	_momentum = momentum * 0.5
 
 func _on_body_entered(body: Node2D):
 	if body is PlayerShip:

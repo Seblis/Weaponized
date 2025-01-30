@@ -45,7 +45,7 @@ func reset(base_score: int = 0):
 func score_penalty(damage: int):
 	_score -= damage * _damage_penalty
 	
-func save_score(level: int, time_bonus = 0):
+func save_score(level: int):
 	_game_timer.paused = true
 	_best_score[level] = max(_best_score[level], _score + _game_timer.time_left)
 	# TODO: permanent score saving, maybe some json?

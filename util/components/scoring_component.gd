@@ -16,8 +16,7 @@ func _ready():
 
 
 func _on_timeout():
-	# TODO: Display lose screen, game over
-	pass
+	SignalManager.on_game_over.emit(false)
 
 func _exit_tree():
 	GameEngine.set_game_timer(null)
