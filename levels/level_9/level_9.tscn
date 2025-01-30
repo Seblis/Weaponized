@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b2bou7crdj5ri" path="res://util/parallax_background.tscn" id="2_sliep"]
 [ext_resource type="Texture2D" uid="uid://3yywke23yy01" path="res://assets/background/Void_BG.png" id="3_fgf2w"]
 [ext_resource type="Texture2D" uid="uid://du44r4j2kg567" path="res://assets/background/Void_Side_BG.png" id="4_g4gfm"]
-[ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/components/PauseMenu/PauseMenu.tscn" id="5_x4tig"]
+[ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/controls/PauseMenu/PauseMenu.tscn" id="5_x4tig"]
 [ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="6_kircu"]
 [ext_resource type="PackedScene" path="res://util/enemy_manager.tscn" id="7_eh7jx"]
 [ext_resource type="PackedScene" path="res://util/enemy_paths.tscn" id="8_nvxo7"]

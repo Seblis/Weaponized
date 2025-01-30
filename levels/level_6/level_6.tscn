@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://levels/level_6/level_6.gd" id="1_jph3j"]
 [ext_resource type="PackedScene" uid="uid://b2bou7crdj5ri" path="res://util/parallax_background.tscn" id="1_pwsxq"]
-[ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/components/PauseMenu/PauseMenu.tscn" id="4_i0a4d"]
+[ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/controls/PauseMenu/PauseMenu.tscn" id="4_i0a4d"]
 [ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="5_ei1mx"]
 [ext_resource type="PackedScene" path="res://util/enemy_manager.tscn" id="6_lhqqa"]
 [ext_resource type="PackedScene" path="res://util/enemy_paths.tscn" id="7_cnlwo"]
