@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cekvrrpspxf05"]
+[gd_scene load_steps=8 format=3 uid="uid://cekvrrpspxf05"]
 
 [ext_resource type="FontFile" uid="uid://cke5t1cl6c21w" path="res://assets/fonts/PublicPixel-z84yD.ttf" id="1_i8asg"]
 [ext_resource type="Script" path="res://util/game_over.gd" id="1_xwlfw"]
+[ext_resource type="FontFile" uid="uid://n7quuucrm58i" path="res://assets/fonts/manaspace/manaspc.ttf" id="2_xfaaj"]
 [ext_resource type="LabelSettings" uid="uid://drkwf6wcs2lo5" path="res://assets/resources/game_over_label.tres" id="3_iwi8l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_15mjd"]
@@ -54,6 +55,7 @@ theme_override_constants/margin_bottom = 32
 [node name="lblDeath" type="Label" parent="VBoxContainer/Control"]
 visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xfaaj")
 text = "You are destroyed. Mercury is doomed..."
 label_settings = SubResource("LabelSettings_15mjd")
 horizontal_alignment = 1
@@ -61,6 +63,7 @@ horizontal_alignment = 1
 [node name="lblWin" type="Label" parent="VBoxContainer/Control"]
 visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xfaaj")
 text = "Mission complete"
 label_settings = SubResource("LabelSettings_18hqp")
 horizontal_alignment = 1
@@ -71,18 +74,21 @@ size_flags_horizontal = 4
 
 [node name="lblContinue" type="Label" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xfaaj")
 text = "Press "
 label_settings = ExtResource("3_iwi8l")
 horizontal_alignment = 1
 
 [node name="lblContinueSpace" type="Label" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xfaaj")
 text = "space"
 label_settings = SubResource("LabelSettings_qhnxb")
 horizontal_alignment = 1
 
 [node name="lblContinue2" type="Label" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xfaaj")
 text = " to continue"
 label_settings = ExtResource("3_iwi8l")
 horizontal_alignment = 1
@@ -92,5 +98,6 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_xfaaj")
 text = "Score: 1000"
 label_settings = ExtResource("3_iwi8l")
