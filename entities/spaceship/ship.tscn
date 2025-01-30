@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://c00a8luwst5da"]
 
 [ext_resource type="Script" path="res://entities/spaceship/ship.gd" id="1_pvfd2"]
-[ext_resource type="PackedScene" uid="uid://duiklrnry7vpi" path="res://util/components/HealthComponent.tscn" id="1_safbe"]
-[ext_resource type="PackedScene" uid="uid://bgward60w0t5c" path="res://util/components/HurtboxComponent.tscn" id="2_gxgmd"]
+[ext_resource type="PackedScene" uid="uid://duiklrnry7vpi" path="res://util/components/Health/HealthComponent.tscn" id="1_safbe"]
+[ext_resource type="PackedScene" uid="uid://bgward60w0t5c" path="res://util/components/Hurtbox/HurtboxComponent.tscn" id="2_gxgmd"]
 [ext_resource type="Script" path="res://entities/spaceship/weapon_pivot.gd" id="4_fr8yc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2jaop"]

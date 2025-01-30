@@ -1,9 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://c5reb8afdhr46"]
+[gd_scene load_steps=15 format=3 uid="uid://c5reb8afdhr46"]
 
 [ext_resource type="Script" path="res://levels/level_5/level_5.gd" id="1_7asel"]
 [ext_resource type="PackedScene" uid="uid://b2bou7crdj5ri" path="res://util/parallax_background.tscn" id="1_dk4gi"]
-[ext_resource type="Texture2D" uid="uid://bfdfeqrsqguwa" path="res://assets/background/Acid_Side_BG.png" id="3_p2tal"]
-[ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/components/PauseMenu/PauseMenu.tscn" id="4_1p18a"]
+[ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/controls/PauseMenu/PauseMenu.tscn" id="4_1p18a"]
 [ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="5_t5fpu"]
 [ext_resource type="PackedScene" path="res://util/enemy_manager.tscn" id="6_e1gus"]
 [ext_resource type="PackedScene" path="res://util/enemy_paths.tscn" id="7_gvr0i"]
@@ -60,7 +59,6 @@ top_level = true
 [node name="Frame" parent="." instance=ExtResource("1_dk4gi")]
 layer = -50
 background_texture = SubResource("CompressedTexture2D_d0lxc")
-frame_texture = ExtResource("3_p2tal")
 
 [node name="Frames" parent="Frame" index="1"]
 top_level = true

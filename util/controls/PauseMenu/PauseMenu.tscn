@@ -1,0 +1,101 @@
+[gd_scene load_steps=9 format=3 uid="uid://bw32b7wt5hrmf"]
+
+[ext_resource type="Script" path="res://util/controls/PauseMenu/PauseMenu.gd" id="1_h3otc"]
+[ext_resource type="Texture2D" uid="uid://00bm731v25ny" path="res://assets/Home_screen.png" id="1_ho2fu"]
+[ext_resource type="PackedScene" uid="uid://0acckdtk2uyx" path="res://util/controls/nine_patch_button.tscn" id="2_81ans"]
+[ext_resource type="Texture2D" uid="uid://cajewvf854bqt" path="res://assets/buttons/ButtonPressed_menu.png" id="3_l514r"]
+[ext_resource type="Texture2D" uid="uid://bv4pe6okt73id" path="res://assets/buttons/Button_menu.png" id="4_86rff"]
+[ext_resource type="FontFile" uid="uid://n7quuucrm58i" path="res://assets/fonts/manaspace/manaspc.ttf" id="5_runym"]
+[ext_resource type="Script" path="res://assets/buttons/valign.gd" id="6_1ceir"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_r1u1s"]
+script = ExtResource("6_1ceir")
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_h3otc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 0
+texture = ExtResource("1_ho2fu")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TextureRect"]
+custom_minimum_size = Vector2(1920, 600)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -300.0
+offset_right = 960.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="continueAssignment" parent="TextureRect/HBoxContainer3/VBoxContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_81ans")]
+custom_minimum_size = Vector2(252, 96)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_pressed = ExtResource("3_l514r")
+texture_released = ExtResource("4_86rff")
+texture_hovered = ExtResource("3_l514r")
+button_rich_label = NodePath("continueLabel")
+set_valign = true
+valign_base = -12
+valign_pressed = -24
+
+[node name="continueLabel" type="RichTextLabel" parent="TextureRect/HBoxContainer3/VBoxContainer/continueAssignment"]
+custom_minimum_size = Vector2(252, 96)
+layout_mode = 0
+offset_right = 252.0
+offset_bottom = 96.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_runym")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-12]CONTINUE ASSIGNMENT[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
+
+[node name="backToMenu" parent="TextureRect/HBoxContainer3/VBoxContainer" node_paths=PackedStringArray("button_rich_label") instance=ExtResource("2_81ans")]
+custom_minimum_size = Vector2(252, 96)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_pressed = ExtResource("3_l514r")
+texture_released = ExtResource("4_86rff")
+texture_hovered = ExtResource("3_l514r")
+button_rich_label = NodePath("backLabel")
+set_valign = true
+valign_base = -12
+valign_pressed = -24
+
+[node name="backLabel" type="RichTextLabel" parent="TextureRect/HBoxContainer3/VBoxContainer/backToMenu"]
+custom_minimum_size = Vector2(252, 96)
+layout_mode = 0
+offset_right = 252.0
+offset_bottom = 96.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_runym")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][valign px=-12]TO MAIN INTERFACE[/valign][/center]"
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_r1u1s")]
+
+[connection signal="_on_nine_patch_button_pressed" from="TextureRect/HBoxContainer3/VBoxContainer/continueAssignment" to="." method="_on_continue_assignment"]
+[connection signal="_on_nine_patch_button_pressed" from="TextureRect/HBoxContainer3/VBoxContainer/backToMenu" to="." method="_on_back_to_menu"]
