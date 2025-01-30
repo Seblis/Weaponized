@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://lrlvibnrtoy5"]
+[gd_scene load_steps=16 format=3 uid="uid://lrlvibnrtoy5"]
 
 [ext_resource type="Script" path="res://levels/level_1/level_1.gd" id="1_d4hc3"]
 [ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="1_kp36w"]
@@ -8,10 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://cngm1eyy7khog" path="res://util/enemy_manager.tscn" id="2_wup08"]
 [ext_resource type="Texture2D" uid="uid://bjj0uy5tju6up" path="res://assets/background/Acid_BG.png" id="3_ahdra"]
 [ext_resource type="Texture2D" uid="uid://bfdfeqrsqguwa" path="res://assets/background/Acid_Side_BG.png" id="4_dpfvv"]
+[ext_resource type="PackedScene" uid="uid://dj4fvgyopn6mg" path="res://util/UI/level_borders.tscn" id="4_xp5jx"]
 [ext_resource type="PackedScene" uid="uid://dk5ry0arxjb7r" path="res://util/UI/hud.tscn" id="9_cw6m8"]
 [ext_resource type="PackedScene" uid="uid://cvqdtwi6o21eo" path="res://util/components/scoring_component.tscn" id="10_rk2gh"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qpy8x"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rxkeh"]
 
 [sub_resource type="Curve2D" id="Curve2D_4ed5i"]
 _data = {
@@ -30,6 +33,9 @@ frame_texture = SubResource("CompressedTexture2D_qpy8x")
 
 [node name="Frames" parent="Background" index="1"]
 top_level = true
+
+[node name="LevelBorders" parent="." instance=ExtResource("4_xp5jx")]
+physics_material_override = SubResource("PhysicsMaterial_rxkeh")
 
 [node name="Ship" parent="." instance=ExtResource("1_kp36w")]
 position = Vector2(412, 314)
