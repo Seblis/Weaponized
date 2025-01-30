@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dk5ry0arxjb7r"]
+[gd_scene load_steps=4 format=3 uid="uid://dk5ry0arxjb7r"]
 
 [ext_resource type="Script" path="res://util/UI/time_left.gd" id="1_440kr"]
+[ext_resource type="FontFile" uid="uid://n7quuucrm58i" path="res://assets/fonts/manaspace/manaspc.ttf" id="1_jw8yw"]
 [ext_resource type="Script" path="res://util/UI/score.gd" id="2_thyle"]
 
 [node name="Hud" type="CanvasLayer"]
@@ -14,34 +15,38 @@ color = Color(0.0941176, 0.0941176, 0.0941176, 0.603922)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 0
-offset_left = 26.0
+offset_left = 10.0
 offset_top = 10.0
-offset_right = 114.0
+offset_right = 137.0
 offset_bottom = 38.0
+theme_override_fonts/normal_font = ExtResource("1_jw8yw")
 text = "Time left: "
 
 [node name="TimeLeft" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 0
-offset_left = 118.0
-offset_top = 6.0
-offset_right = 242.0
-offset_bottom = 38.0
+offset_left = 119.0
+offset_top = 10.0
+offset_right = 243.0
+offset_bottom = 42.0
+theme_override_fonts/normal_font = ExtResource("1_jw8yw")
 text = "00:00"
 script = ExtResource("1_440kr")
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 0
-offset_left = 26.0
+offset_left = 52.0
 offset_top = 34.0
-offset_right = 104.0
+offset_right = 119.0
 offset_bottom = 67.0
+theme_override_fonts/normal_font = ExtResource("1_jw8yw")
 text = "Score: "
 
 [node name="Score" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 31.0
-offset_right = 215.0
-offset_bottom = 58.0
+offset_left = 119.0
+offset_top = 34.0
+offset_right = 225.0
+offset_bottom = 61.0
+theme_override_fonts/normal_font = ExtResource("1_jw8yw")
 text = "999999"
 script = ExtResource("2_thyle")
