@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bjj0uy5tju6up" path="res://assets/background/Acid_BG.png" id="3_lq5w2"]
 [ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="3_wlkl7"]
 [ext_resource type="Texture2D" uid="uid://bfdfeqrsqguwa" path="res://assets/background/Acid_Side_BG.png" id="4_gxaf1"]
-[ext_resource type="PackedScene" path="res://util/enemy_manager.tscn" id="4_jkhot"]
-[ext_resource type="PackedScene" path="res://util/enemy_paths.tscn" id="5_32t2v"]
+[ext_resource type="PackedScene" uid="uid://cngm1eyy7khog" path="res://util/enemy_manager.tscn" id="4_jkhot"]
+[ext_resource type="PackedScene" uid="uid://cyl3q0blt7u4f" path="res://util/enemy_paths.tscn" id="5_32t2v"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hovld"]
 

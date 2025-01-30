@@ -14,7 +14,7 @@ var _player: PlayerShip = null
 var _enemies_count = 0
 var _score = 0
 var _game_timer
-var _damage_penalty
+var _damage_penalty = 0
 
 var _best_score = [0,0,0,0,0,0,0,0,0,0]
 
