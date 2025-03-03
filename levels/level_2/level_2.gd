@@ -28,8 +28,7 @@ func _ready():
 			[rapidfire_enemy, 4, 5, 1, 0.07],
 			[rapidfire_enemy, 5, 5, 1, 0.07],
 			[rapidfire_enemy, 6, 5, 1, 0.07],
-			[rapidfire_enemy, 7, 5, 1, 0.07],
-		],
+			[rapidfire_enemy, 7, 5, 1, 0.07],		],
 		[	
 			#wave 3
 			[rapidfire_enemy, 8, 6, 1, 0.07],

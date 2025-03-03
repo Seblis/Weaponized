@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dy74tjkeoc7sh"]
 
-[ext_resource type="Script" path="res://util/components/scoring_component.gd" id="1_7q33j"]
+[ext_resource type="Script" uid="uid://60gyr3goyejd" path="res://util/components/scoring_component.gd" id="1_7q33j"]
 
 [node name="ScoringComponent" type="Timer"]
 wait_time = 90.0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cekvrrpspxf05"]
 
 [ext_resource type="FontFile" uid="uid://cke5t1cl6c21w" path="res://assets/fonts/PublicPixel-z84yD.ttf" id="1_i8asg"]
-[ext_resource type="Script" path="res://util/game_over.gd" id="1_xwlfw"]
+[ext_resource type="Script" uid="uid://couhklxvkauoq" path="res://util/game_over.gd" id="1_xwlfw"]
 [ext_resource type="FontFile" uid="uid://n7quuucrm58i" path="res://assets/fonts/manaspace/manaspc.ttf" id="2_xfaaj"]
 [ext_resource type="LabelSettings" uid="uid://drkwf6wcs2lo5" path="res://assets/resources/game_over_label.tres" id="3_iwi8l"]
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=23 format=3 uid="uid://b6amng0xxc5tn"]
 
-[ext_resource type="Script" path="res://levels/level_9/level_9.gd" id="1_kip5s"]
+[ext_resource type="Script" uid="uid://chxyebshr7530" path="res://levels/level_9/level_9.gd" id="1_kip5s"]
 [ext_resource type="PackedScene" uid="uid://b2bou7crdj5ri" path="res://util/parallax_background.tscn" id="2_sliep"]
 [ext_resource type="Texture2D" uid="uid://3yywke23yy01" path="res://assets/background/Void_BG.png" id="3_fgf2w"]
-[ext_resource type="PackedScene" path="res://util/level_borders.tscn" id="4_0r8j0"]
+[ext_resource type="PackedScene" uid="uid://dj4fvgyopn6mg" path="res://util/level_borders.tscn" id="4_0r8j0"]
 [ext_resource type="Texture2D" uid="uid://du44r4j2kg567" path="res://assets/background/Void_Side_BG.png" id="4_g4gfm"]
 [ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/components/PauseMenu/PauseMenu.tscn" id="5_x4tig"]
 [ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="6_kircu"]

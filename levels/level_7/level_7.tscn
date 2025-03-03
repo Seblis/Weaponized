@@ -1,11 +1,11 @@
 [gd_scene load_steps=18 format=3 uid="uid://dnfq6igg78a7y"]
 
 [ext_resource type="PackedScene" uid="uid://b2bou7crdj5ri" path="res://util/parallax_background.tscn" id="1_1mg4x"]
-[ext_resource type="Script" path="res://levels/level_7/level_7.gd" id="1_od2ch"]
+[ext_resource type="Script" uid="uid://buh5cu3q2r8u7" path="res://levels/level_7/level_7.gd" id="1_od2ch"]
 [ext_resource type="Texture2D" uid="uid://3yywke23yy01" path="res://assets/background/Void_BG.png" id="2_onxbl"]
 [ext_resource type="Texture2D" uid="uid://du44r4j2kg567" path="res://assets/background/Void_Side_BG.png" id="3_ull55"]
 [ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/components/PauseMenu/PauseMenu.tscn" id="4_1k82l"]
-[ext_resource type="PackedScene" path="res://util/level_borders.tscn" id="4_m0iye"]
+[ext_resource type="PackedScene" uid="uid://dj4fvgyopn6mg" path="res://util/level_borders.tscn" id="4_m0iye"]
 [ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="5_h5871"]
 [ext_resource type="PackedScene" uid="uid://cngm1eyy7khog" path="res://util/enemy_manager.tscn" id="6_buw2y"]
 [ext_resource type="PackedScene" uid="uid://cyl3q0blt7u4f" path="res://util/enemy_paths.tscn" id="7_8n04c"]

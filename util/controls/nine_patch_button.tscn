@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://0acckdtk2uyx"]
 
-[ext_resource type="Script" path="res://util/controls/nine_patch_button.gd" id="1_wgy3s"]
+[ext_resource type="Script" uid="uid://b0p4ixw45l84b" path="res://util/controls/nine_patch_button.gd" id="1_wgy3s"]
 [ext_resource type="Texture2D" uid="uid://bv4pe6okt73id" path="res://assets/buttons/Button_menu.png" id="2_45n3h"]
 
 [sub_resource type="Theme" id="Theme_42i3f"]

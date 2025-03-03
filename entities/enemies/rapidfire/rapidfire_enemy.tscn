@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://c610i3b0cpoea"]
 
-[ext_resource type="Script" path="res://entities/enemies/rapidfire/rapidfire_enemy.gd" id="1_sy5j2"]
+[ext_resource type="Script" uid="uid://kb1x1uhpvyfe" path="res://entities/enemies/rapidfire/rapidfire_enemy.gd" id="1_sy5j2"]
 [ext_resource type="Texture2D" uid="uid://oa6dsc3xljq4" path="res://assets/sprites/EnemyRapidfire.png" id="2_0fsj8"]
-[ext_resource type="Script" path="res://entities/enemies/rapidfire/weapon_manager.gd" id="3_4o1w7"]
+[ext_resource type="Script" uid="uid://etmcnqvw0xu0" path="res://entities/enemies/rapidfire/weapon_manager.gd" id="3_4o1w7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2cccv"]
 atlas = ExtResource("2_0fsj8")

@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://tng70lpkvgdx"]
 
 [ext_resource type="Texture2D" uid="uid://bt1drhjrvkupj" path="res://assets/sprites/EnemySquare.png" id="1_ssiv6"]
-[ext_resource type="Script" path="res://entities/enemies/square/square_enemy.gd" id="1_tbmxh"]
-[ext_resource type="Script" path="res://entities/enemies/square/weapon_manager.gd" id="3_nx2ky"]
+[ext_resource type="Script" uid="uid://cm2l46r2byjre" path="res://entities/enemies/square/square_enemy.gd" id="1_tbmxh"]
+[ext_resource type="Script" uid="uid://b0aof15tdms" path="res://entities/enemies/square/weapon_manager.gd" id="3_nx2ky"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wfsk0"]
 atlas = ExtResource("1_ssiv6")

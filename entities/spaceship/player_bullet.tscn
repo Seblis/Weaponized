@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://colqqhs87ufq3"]
 
-[ext_resource type="Script" path="res://entities/spaceship/player_bullet.gd" id="1_8taym"]
+[ext_resource type="Script" uid="uid://bms283apwy3g3" path="res://entities/spaceship/player_bullet.gd" id="1_8taym"]
 [ext_resource type="Texture2D" uid="uid://xy33qmt011qp" path="res://assets/sprites/PlayerBullet.png" id="2_bx0yh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8v2lf"]

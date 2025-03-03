@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://c00a8luwst5da"]
 
-[ext_resource type="Script" path="res://entities/spaceship/ship.gd" id="1_pvfd2"]
+[ext_resource type="Script" uid="uid://5f58a11g6di4" path="res://entities/spaceship/ship.gd" id="1_pvfd2"]
 [ext_resource type="Texture2D" uid="uid://ds0uenly6q3gr" path="res://assets/sprites/Main_character.png" id="2_xr7bw"]
-[ext_resource type="Script" path="res://entities/spaceship/weapon_pivot.gd" id="4_fr8yc"]
+[ext_resource type="Script" uid="uid://cxqlgbiyxf777" path="res://entities/spaceship/weapon_pivot.gd" id="4_fr8yc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ls0k0"]
 atlas = ExtResource("2_xr7bw")

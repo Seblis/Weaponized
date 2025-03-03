@@ -1,8 +1,8 @@
 [gd_scene load_steps=19 format=3 uid="uid://c5reb8afdhr46"]
 
-[ext_resource type="Script" path="res://levels/level_5/level_5.gd" id="1_7asel"]
+[ext_resource type="Script" uid="uid://boaabk4wou6lj" path="res://levels/level_5/level_5.gd" id="1_7asel"]
 [ext_resource type="PackedScene" uid="uid://b2bou7crdj5ri" path="res://util/parallax_background.tscn" id="1_dk4gi"]
-[ext_resource type="PackedScene" path="res://util/level_borders.tscn" id="3_aar1b"]
+[ext_resource type="PackedScene" uid="uid://dj4fvgyopn6mg" path="res://util/level_borders.tscn" id="3_aar1b"]
 [ext_resource type="PackedScene" uid="uid://bw32b7wt5hrmf" path="res://util/components/PauseMenu/PauseMenu.tscn" id="4_1p18a"]
 [ext_resource type="PackedScene" uid="uid://c00a8luwst5da" path="res://entities/spaceship/ship.tscn" id="5_t5fpu"]
 [ext_resource type="PackedScene" uid="uid://cngm1eyy7khog" path="res://util/enemy_manager.tscn" id="6_e1gus"]

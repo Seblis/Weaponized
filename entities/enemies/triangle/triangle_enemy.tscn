@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://bx5u22cwo4qbg"]
 
-[ext_resource type="Script" path="res://entities/enemies/triangle/triangle_enemy.gd" id="1_h66d6"]
+[ext_resource type="Script" uid="uid://dnq08ualwdh60" path="res://entities/enemies/triangle/triangle_enemy.gd" id="1_h66d6"]
 [ext_resource type="Texture2D" uid="uid://qf1rtblqn4aq" path="res://assets/sprites/EnemyTriangle.png" id="1_kdntu"]
-[ext_resource type="Script" path="res://entities/enemies/triangle/weapon_manager.gd" id="3_wmrvx"]
+[ext_resource type="Script" uid="uid://c0jak04a58btq" path="res://entities/enemies/triangle/weapon_manager.gd" id="3_wmrvx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_attuu"]
 atlas = ExtResource("1_kdntu")

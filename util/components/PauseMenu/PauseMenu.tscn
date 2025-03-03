@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://bw32b7wt5hrmf"]
 
-[ext_resource type="Script" path="res://util/components/PauseMenu/PauseMenu.gd" id="1_h3otc"]
+[ext_resource type="Script" uid="uid://fvhs4e3u6pbv" path="res://util/components/PauseMenu/PauseMenu.gd" id="1_h3otc"]
 [ext_resource type="Texture2D" uid="uid://00bm731v25ny" path="res://assets/Home_screen.png" id="1_ho2fu"]
 [ext_resource type="PackedScene" uid="uid://0acckdtk2uyx" path="res://util/controls/nine_patch_button.tscn" id="2_81ans"]
 [ext_resource type="Texture2D" uid="uid://cajewvf854bqt" path="res://assets/buttons/ButtonPressed_menu.png" id="3_l514r"]
 [ext_resource type="Texture2D" uid="uid://bv4pe6okt73id" path="res://assets/buttons/Button_menu.png" id="4_86rff"]
 [ext_resource type="FontFile" uid="uid://n7quuucrm58i" path="res://assets/fonts/manaspace/manaspc.ttf" id="5_runym"]
-[ext_resource type="Script" path="res://assets/buttons/valign.gd" id="6_1ceir"]
+[ext_resource type="Script" uid="uid://b6fvu5yxonh44" path="res://assets/buttons/valign.gd" id="6_1ceir"]
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_r1u1s"]
 script = ExtResource("6_1ceir")

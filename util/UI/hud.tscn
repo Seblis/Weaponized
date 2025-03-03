@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dk5ry0arxjb7r"]
 
-[ext_resource type="Script" path="res://util/UI/time_left.gd" id="1_440kr"]
+[ext_resource type="Script" uid="uid://c4yq7xyefvotk" path="res://util/UI/time_left.gd" id="1_440kr"]
 [ext_resource type="FontFile" uid="uid://n7quuucrm58i" path="res://assets/fonts/manaspace/manaspc.ttf" id="1_jw8yw"]
-[ext_resource type="Script" path="res://util/UI/score.gd" id="2_thyle"]
+[ext_resource type="Script" uid="uid://ciccjoyssvl4i" path="res://util/UI/score.gd" id="2_thyle"]
 
 [node name="Hud" type="CanvasLayer"]
 

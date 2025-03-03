@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://belvdvt81u044"]
 
-[ext_resource type="Script" path="res://entities/enemies/base_enemy/base_enemy.gd" id="1_45bqk"]
+[ext_resource type="Script" uid="uid://dpvct384fgwpy" path="res://entities/enemies/base_enemy/base_enemy.gd" id="1_45bqk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nxeey"]
 radius = 20.0

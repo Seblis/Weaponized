@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cmcfty5xpkrhk"]
 
-[ext_resource type="Script" path="res://util/components/Aggro/AggroComponent.gd" id="1_8tpsw"]
+[ext_resource type="Script" uid="uid://bywhi6kemokaw" path="res://util/components/Aggro/AggroComponent.gd" id="1_8tpsw"]
 
 [node name="AggroComponent" type="Area2D" groups=["GROUP_AGGRO_RANGE"]]
 script = ExtResource("1_8tpsw")
